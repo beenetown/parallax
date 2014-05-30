@@ -1,0 +1,250 @@
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin rounded($radius: 0.4em) {
+-webkit-border-radius: $radius;
+-moz-border-radius: $radius;
+border-radius: $radius;
+}
+
+@mixin rounded_top($radius: 0.4em) {
+-webkit-border-radius: $radius $radius 0 0;
+-moz-border-radius: $radius $radius 0 0;
+border-radius: $radius $radius 0 0;
+}
+
+@mixin backgroundSize {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin buttonBackground($fromColor: $lightGreen, $toColor: $darkGreen) {
+  background: $fromColor;
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from($fromColor),
+    to($toColor));
+  background: -moz-linear-gradient( to bottom, $fromColor, $toColor);
+  border: none;
+  border: none;
+}
+
+*, *:before, *:after {@include box_sizing;}
+
+html, body{height:100%;}
+
+html {
+  // background-color: white;
+
+}
+
+body {
+  // background-color: transparent;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  color: #444;
+    z-index: 999;
+  span {
+    margin: 20px 10px 0 0;
+    font-size: 1.5em;
+    width: 10%;
+    float: right;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 999;
+  right: 1%;
+  top: 30%;
+  ul {
+    list-style: none;
+    li {
+      margin-top: 10px;
+      text-align: center;
+    }
+    a {
+      color: transparent;
+      text-decoration: none;
+    }
+  }
+}
+
+#popup-1 {
+  top: -5px;
+}
+
+#popup-2 {
+  top: 25px;
+}
+
+#popup-3 {
+  top: 55px;
+}
+
+#popup-4 {
+  top: 85px;
+}
+
+#popup-5 {
+  top: 115px;
+}
+
+#popup-6 {
+  top: 145px;
+}
+
+#popup-7 {
+  top: 175px;
+}
+
+#popup-8 {
+  top: 205px;
+}
+
+#popup-9 {
+  top: 235px;
+}
+
+#popup-10 {
+  top: 265px;
+}
+
+
+.nav-popup {
+  @include rounded(0.2em);
+  right: 35px;
+  display: none;
+  position: absolute;
+  background: white;
+  padding: 12px;
+  font-size: 1.5em;
+  // border: 1px solid #c2e1f5;
+}
+.nav-popup:after, .nav-popup:before {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.nav-popup:before {
+  border-color: rgba(194, 225, 245, 0);
+  border-left-color: white;
+  border-width: 9px;
+  margin-top: -9px;
+}
+
+.nav-li {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  @include rounded(50%);
+  background-color: white;
+  a {
+    display: block;
+  }
+}
+
+
+.page {
+  font-size: 1.5em;
+  // margin-top: 500px;
+  width: 100%;
+  // position: relative;
+  height: 800px;
+}
+
+.content {
+  color: white;
+  width: 25%;
+  background-color: transparent;
+  padding-top: 10%;
+  margin-left: 10%;
+  // position: absolute;
+}
+
+.divider {
+  color: #444;
+  padding: 40px 0 40px 0;
+  opacity: 0.8;
+  font-size: 6em;
+  text-align: center;
+  background-color: #111;
+  background: url(../images/placeholder/struckaxiom.png);
+}
+
+#home {
+  color: #000;
+  background: url(../images/placeholder/plane.jpg) no-repeat center center fixed; 
+  @include backgroundSize;
+  opacity: 0.6;
+  text-align: center;
+  font-size: 20em;
+  padding: 5%;
+  line-height: 0.9em;
+  letter-spacing: -10px;
+}
+
+#recording-page {
+  // margin-top: 0;
+  background: url(../images/placeholder/fader.jpg) no-repeat center center fixed; 
+  @include backgroundSize;
+}
+
+
+#mixing-page {
+  background: url(../images/placeholder/dash.jpg) no-repeat center center fixed; 
+  @include backgroundSize;
+}
+
+#gear-page {
+  background: url(../images/placeholder/silver_mic.jpg) no-repeat center center fixed; 
+  @include backgroundSize;
+}
+
+#rehearsals-page {
+  background: url(../images/placeholder/concert.jpg) no-repeat center center fixed; 
+  @include backgroundSize;
+}
+
+#rentals-page {
+  background: url(../images/placeholder/silver_mic.jpg) no-repeat center center fixed; 
+  @include backgroundSize;
+}
+
+#webcasts-page {
+  background: url(../images/placeholder/banjo_guy.jpg) no-repeat center center fixed; 
+  @include backgroundSize;
+  .content {
+    margin-left: 65%;
+  }
+}
+
+#blog-page {
+  background: url(../images/placeholder/dash.jpg) no-repeat center center fixed; 
+  @include backgroundSize;  
+}
+
+#about-page {
+  background: url(../images/placeholder/sputnik.jpg) no-repeat center center fixed; 
+  @include backgroundSize;
+}
+
+#contact-page {
+  background: url(../images/placeholder/steering_wheel.jpg) no-repeat center center fixed; 
+  @include backgroundSize;  
+}
