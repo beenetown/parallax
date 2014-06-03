@@ -8,7 +8,7 @@ function setNavandFade() {
     $('.nav-li').removeClass('active');
     $('#' + page).addClass('active');
     // console.log((page * pageHeight)/$(window).scrollTop());
-    // $('.' + page).css({'opacity':(page * pageHeight)/$(window).scrollTop();
+    $('.' + page).css({'opacity':(((page * totalHeight)-$(window).scrollTop())/600)});
   };
 };
 
@@ -38,4 +38,7 @@ $(document).ready(function() {
   $(window).scroll(setNavandFade);
   $('#home h1').fadeOut(7000);
   $('#menu').fadeIn(7000);
+  $('.nav-li').click(function() {
+    $('.page').css({'opacity': '1'});
+  });
 });
