@@ -6,19 +6,6 @@
 html, body {
   height: 100%; }
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  color: #444;
-  z-index: 999; }
-  header span {
-    margin: 20px 10px 0 0;
-    font-size: 1.5em;
-    width: 10%;
-    float: right; }
-
 .sidebar {
   position: fixed;
   z-index: 999;
@@ -26,176 +13,200 @@ header {
   top: 30%; }
   .sidebar ul {
     list-style: none; }
-    .sidebar ul li {
-      margin-top: 10px;
-      text-align: center; }
-    .sidebar ul a {
+  .sidebar .nav-li {
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid #555;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #ddd; }
+    .sidebar .nav-li a {
+      margin: 2px 1px 0 0;
       color: transparent;
-      text-decoration: none; }
-
-#popup-1 {
-  top: -5px; }
-
-#popup-2 {
-  top: 25px; }
-
-#popup-3 {
-  top: 55px; }
-
-#popup-4 {
-  top: 85px; }
-
-#popup-5 {
-  top: 115px; }
-
-#popup-6 {
-  top: 145px; }
-
-#popup-7 {
-  top: 175px; }
-
-#popup-8 {
-  top: 205px; }
-
-#popup-9 {
-  top: 235px; }
-
-#popup-10 {
-  top: 265px; }
-
-.nav-popup {
-  -webkit-border-radius: 0.2em;
-  -moz-border-radius: 0.2em;
-  border-radius: 0.2em;
-  right: 35px;
-  display: none;
-  position: absolute;
-  background: white;
-  padding: 12px;
-  font-size: 1.5em; }
-
-.nav-popup:after, .nav-popup:before {
-  left: 100%;
-  top: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none; }
-
-.nav-popup:before {
-  border-color: rgba(194, 225, 245, 0);
-  border-left-color: white;
-  border-width: 9px;
-  margin-top: -9px; }
-
-.nav-li {
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  background-color: white; }
-  .nav-li a {
-    display: block; }
+      text-decoration: none;
+      display: block; }
+  .sidebar .active {
+    border: 1px solid #FFEC6C;
+    background-color: #444; }
+    .sidebar .active a {
+      color: transparent; }
+  .sidebar .nav-popup {
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    border-radius: 0.2em;
+    right: 35px;
+    display: none;
+    position: absolute;
+    background: #ddd;
+    padding: 12px;
+    font-size: 1.5em;
+    border: 1px solid #555; }
+  .sidebar .nav-popup:after, .sidebar .nav-popup:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+  .sidebar .nav-popup:after {
+    border-color: rgba(194, 225, 245, 0);
+    border-left-color: #ddd;
+    border-width: 9px;
+    margin-top: -9px; }
+  .sidebar .nav-popup:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-left-color: #555;
+    border-width: 10px;
+    margin-top: -10px; }
+  .sidebar #nav-pointer {
+    font-size: 2em;
+    top: 50px;
+    right: 50px; }
+  .sidebar #popup-1 {
+    top: -5px; }
+  .sidebar #popup-2 {
+    top: 25px; }
+  .sidebar #popup-3 {
+    top: 55px; }
+  .sidebar #popup-4 {
+    top: 85px; }
+  .sidebar #popup-5 {
+    top: 115px; }
+  .sidebar #popup-6 {
+    top: 145px; }
+  .sidebar #popup-7 {
+    top: 175px; }
+  .sidebar #popup-8 {
+    top: 205px; }
+  .sidebar #popup-9 {
+    top: 235px; }
+  .sidebar #popup-10 {
+    top: 265px; }
 
 .page {
-  font-size: 1.5em;
   width: 100%;
-  height: 800px; }
+  height: 150%; }
 
 .content {
-  color: white;
-  width: 25%;
-  background-color: transparent;
-  padding-top: 10%;
-  margin-left: 10%; }
+  font-size: 1.5em;
+  text-align: justify;
+  color: #ddd;
+  width: 20%;
+  height: 100%; }
+  .content p {
+    padding-top: 20px; }
+
+.content-background {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  background: url(../images/patterns/semi_transparent_background.png); }
 
 .divider {
-  color: #444;
-  padding: 40px 0 40px 0;
-  opacity: 0.8;
+  color: #888;
+  background-color: #333;
+  padding: 5px 0 5px 0;
   font-size: 6em;
   text-align: center;
-  background-color: #111;
-  background: url(../images/placeholder/struckaxiom.png); }
+  text-shadow: #555 1px 1px 0px; }
 
 #home {
-  color: #000;
-  background: url(../images/placeholder/plane.jpg) no-repeat center center fixed;
+  color: #ddd;
+  background: url(../images/placeholder/sound_farm_1_1300.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  opacity: 0.6;
-  text-align: center;
-  font-size: 20em;
-  padding: 5%;
-  line-height: 0.9em;
-  letter-spacing: -10px; }
+  background-size: cover; }
+  #home h1 {
+    text-align: center;
+    font-size: 20em;
+    padding: 2%;
+    line-height: 0.9em;
+    letter-spacing: -10px; }
+  #home #menu {
+    display: none;
+    background: radial-gradient(circle at 0% 50%, rgba(17, 17, 17, 0) 9px, #191919 10px, rgba(17, 17, 17, 0) 11px) 0px 10px, radial-gradient(at 100% 100%, rgba(17, 17, 17, 0) 9px, #191919 10px, rgba(17, 17, 17, 0) 11px), #111111;
+    background-size: 20px 20px;
+    color: #888;
+    font-size: 1.8em;
+    width: 100%;
+    padding: 10px; }
+    #home #menu ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      #home #menu ul li {
+        margin-left: 5px;
+        display: inline; }
+        #home #menu ul li a {
+          color: #888;
+          text-decoration: none; }
 
 #recording-page {
-  background: url(../images/placeholder/fader.jpg) no-repeat center center fixed;
+  background: url(../images/placeholder/fader_1300.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
 #mixing-page {
-  background: url(../images/placeholder/dash.jpg) no-repeat center center fixed;
+  background: url(../images/placeholder/dash_1300.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
 #gear-page {
-  background: url(../images/placeholder/silver_mic.jpg) no-repeat center center fixed;
+  background: url(../images/placeholder/silver_mic_1300.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
 #rehearsals-page {
-  background: url(../images/placeholder/concert.jpg) no-repeat center center fixed;
+  background: url(../images/placeholder/concert_1300.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
-#rentals-page {
-  background: url(../images/placeholder/silver_mic.jpg) no-repeat center center fixed;
+#rental-page {
+  background: url(../images/placeholder/lights_1300.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
 #webcasts-page {
-  background: url(../images/placeholder/banjo_guy.jpg) no-repeat center center fixed;
+  background: url(../images/placeholder/banjo_guy_1300.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  #webcasts-page .content {
-    margin-left: 65%; }
 
 #blog-page {
-  background: url(../images/placeholder/dash.jpg) no-repeat center center fixed;
+  background: url(../images/placeholder/dash_1300.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
 #about-page {
-  background: url(../images/placeholder/sputnik.jpg) no-repeat center center fixed;
+  background: url(../images/placeholder/sputnik_1300.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
 #contact-page {
-  background: url(../images/placeholder/steering_wheel.jpg) no-repeat center center fixed;
+  background: url(../images/placeholder/steering_wheel_1300.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
