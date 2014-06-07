@@ -1,16 +1,16 @@
 <!--#include virtual="/partials/head.html" -->
-
 <body>
-  <!--#include virtual="/partials/sidebar.html" -->
-  <!--#include virtual="/partials/pages/home.html" -->  
-  <!--#include virtual="/partials/pages/recording.html" -->  
-  <!--#include virtual="/partials/pages/mixing.html" -->  
-  <!--#include virtual="/partials/pages/gear.html" -->  
-  <!--#include virtual="/partials/pages/rehearsals.html" -->  
-  <!--#include virtual="/partials/pages/rental.html" -->  
-  <!--#include virtual="/partials/pages/webcasts.html" -->
-  <!--#include virtual="/partials/pages/blog.html" -->
-  <!--#include virtual="/partials/pages/about.html" -->
-  <!--#include virtual="/partials/pages/contact.html" -->  
+    <!--#include virtual="/partials/sidebar.html" -->
+    <!--#include virtual="/partials/pages/home.html" -->  
+    <!--#include virtual="/partials/pages/recording.html" -->  
+    <!--#include virtual="/partials/pages/mixing.html" -->
+    
+    <!--#include virtual="/partials/footer.html" -->
+    <!--#include virtual="/partials/pages/gear.html" -->  
+    <!--#include virtual="/partials/pages/rehearsals.html" -->  
+    <!--#include virtual="/partials/pages/rental.html" -->  
+    <!--#include virtual="/partials/pages/webcasts.html" -->
+    <!--#include virtual="/partials/pages/blog.html" -->
+    <!--#include virtual="/partials/pages/about.html" -->
+    <!--#include virtual="/partials/pages/contact.html" --> 
 </body>
-<!--#include virtual="/partials/footer.html" -->

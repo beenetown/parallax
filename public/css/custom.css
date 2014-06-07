@@ -6,208 +6,576 @@
 html, body {
   height: 100%; }
 
-.sidebar {
-  position: fixed;
-  z-index: 999;
-  right: 1%;
-  top: 30%; }
-  .sidebar ul {
-    list-style: none; }
-  .sidebar .nav-li {
-    margin-top: 10px;
-    text-align: center;
-    border: 1px solid #555;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    background-color: #ddd; }
-    .sidebar .nav-li a {
-      margin: 2px 1px 0 0;
-      color: transparent;
-      text-decoration: none;
-      display: block; }
-  .sidebar .active {
-    border: 1px solid #FFEC6C;
-    background-color: #444; }
-    .sidebar .active a {
-      color: transparent; }
-  .sidebar .nav-popup {
-    -webkit-border-radius: 0.2em;
-    -moz-border-radius: 0.2em;
-    border-radius: 0.2em;
-    right: 35px;
+@media only screen and (min-width: 100px) and (max-device-width: 700px) {
+  #show-sidebar {
+    z-index: 1000;
+    position: fixed;
+    background-color: #FFEC6C;
+    padding: 2px;
+    top: 10px;
+    right: 10px;
+    width: 10%;
+    display: inline; }
+    #show-sidebar img {
+      width: 100%; }
+
+  .sidebar {
+    background-color: #FFEC6C;
     display: none;
-    position: absolute;
-    background: #ddd;
-    padding: 12px;
-    font-size: 1.5em;
-    border: 1px solid #555; }
-  .sidebar .nav-popup:after, .sidebar .nav-popup:before {
-    left: 100%;
-    top: 50%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none; }
-  .sidebar .nav-popup:after {
-    border-color: rgba(194, 225, 245, 0);
-    border-left-color: #ddd;
-    border-width: 9px;
-    margin-top: -9px; }
-  .sidebar .nav-popup:before {
-    border-color: rgba(194, 225, 245, 0);
-    border-left-color: #555;
-    border-width: 10px;
-    margin-top: -10px; }
-  .sidebar #nav-pointer {
-    font-size: 2em;
-    top: 50px;
-    right: 50px; }
-  .sidebar #popup-1 {
-    top: -5px; }
-  .sidebar #popup-2 {
-    top: 25px; }
-  .sidebar #popup-3 {
-    top: 55px; }
-  .sidebar #popup-4 {
-    top: 85px; }
-  .sidebar #popup-5 {
-    top: 115px; }
-  .sidebar #popup-6 {
-    top: 145px; }
-  .sidebar #popup-7 {
-    top: 175px; }
-  .sidebar #popup-8 {
-    top: 205px; }
-  .sidebar #popup-9 {
-    top: 235px; }
-  .sidebar #popup-10 {
-    top: 265px; }
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 60%; }
+    .sidebar .nav {
+      height: 60%;
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 30%; }
+      .sidebar .nav ul {
+        list-style: none; }
+    .sidebar .nav-li {
+      width: 100%;
+      border: 1px solid #555;
+      cursor: pointer;
+      margin-top: 10px;
+      height: 60px;
+      background-color: #ddd; }
+      .sidebar .nav-li a {
+        height: 100%;
+        color: transparent;
+        text-decoration: none;
+        display: block;
+        cursor: pointer; }
+    .sidebar .active {
+      border: 1px solid #FFEC6C;
+      background-color: #444; }
+      .sidebar .active a {
+        color: transparent; }
+    .sidebar .nav-popup {
+      z-index: 1001;
+      position: fixed;
+      margin-top: 10px;
+      font-size: 4em;
+      left: 455px;
+      cursor: pointer; }
+    .sidebar #nav-pointer {
+      top: 90px; }
+    .sidebar #popup-1 {
+      top: 165px;
+      cursor: pointer; }
+    .sidebar #popup-2 {
+      top: 235px;
+      cursor: pointer; }
+    .sidebar #popup-3 {
+      top: 305px;
+      cursor: pointer; }
+    .sidebar #popup-4 {
+      top: 375px;
+      cursor: pointer; }
+    .sidebar #popup-5 {
+      top: 445px;
+      cursor: pointer; }
+    .sidebar #popup-6 {
+      top: 515px;
+      cursor: pointer; }
+    .sidebar #popup-7 {
+      top: 585px;
+      cursor: pointer; }
+    .sidebar #popup-8 {
+      top: 655px;
+      cursor: pointer; }
+    .sidebar #popup-9 {
+      top: 725px;
+      cursor: pointer; }
+    .sidebar #popup-10 {
+      top: 795px;
+      cursor: pointer; }
 
-.page {
-  width: 100%;
-  height: 150%; }
-
-.content {
-  font-size: 1.5em;
-  text-align: justify;
-  color: #ddd;
-  width: 20%;
-  height: 100%; }
-  .content p {
-    padding-top: 20px; }
-
-.content-background {
-  padding: 10px;
-  height: 100%;
-  width: 100%;
-  opacity: 0.7;
-  background: url(../images/patterns/semi_transparent_background.png); }
-
-.divider {
-  color: #888;
-  background-color: #333;
-  padding: 5px 0 5px 0;
-  font-size: 6em;
-  text-align: center;
-  text-shadow: #555 1px 1px 0px; }
-
-#home {
-  color: #ddd;
-  background: url(../images/placeholder/sound_farm_1_1300.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  #home h1 {
-    text-align: center;
-    font-size: 20em;
-    padding: 2%;
-    line-height: 0.9em;
-    letter-spacing: -10px; }
-  #home #menu {
-    display: none;
-    background: radial-gradient(circle at 0% 50%, rgba(17, 17, 17, 0) 9px, #191919 10px, rgba(17, 17, 17, 0) 11px) 0px 10px, radial-gradient(at 100% 100%, rgba(17, 17, 17, 0) 9px, #191919 10px, rgba(17, 17, 17, 0) 11px), #111111;
-    background-size: 20px 20px;
-    color: #888;
-    font-size: 1.8em;
+  .page {
     width: 100%;
-    padding: 10px; }
-    #home #menu ul {
-      list-style: none;
-      width: 80%;
-      margin: 0 auto; }
-      #home #menu ul li {
-        margin-left: 5px;
-        display: inline; }
-        #home #menu ul li a {
-          color: #888;
-          text-decoration: none; }
+    height: 100%;
+    overflow: scroll; }
 
-#recording-page {
-  background: url(../images/placeholder/fader_1300.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  .content {
+    font-size: 3em;
+    text-align: justify;
+    color: #ddd;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10%;
+    height: 150%; }
+    .content p {
+      padding-top: 20px; }
 
-#mixing-page {
-  background: url(../images/placeholder/dash_1300.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  .content-background {
+    -webkit-border-radius: 0.4em;
+    -moz-border-radius: 0.4em;
+    border-radius: 0.4em;
+    padding: 10px;
+    background: url(../images/patterns/semi_transparent_background.png); }
 
-#gear-page {
-  background: url(../images/placeholder/silver_mic_1300.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  .divider {
+    color: #888;
+    background-color: #333;
+    padding: 5px 0 5px 0;
+    font-size: 7em;
+    text-align: center;
+    text-shadow: #555 1px 1px 0px; }
 
-#rehearsals-page {
-  background: url(../images/placeholder/concert_1300.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  #home {
+    color: #ddd;
+    background: url(../images/placeholder/sound_farm_1_400.png) no-repeat center;
+    background-size: cover; }
+    #home h1 {
+      text-align: center;
+      font-size: 20em;
+      padding: 2%;
+      line-height: 0.9em;
+      letter-spacing: -10px; }
 
-#rental-page {
-  background: url(../images/placeholder/lights_1300.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  #recording-page {
+    background: url(../images/placeholder/fader_400.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
 
-#webcasts-page {
-  background: url(../images/placeholder/banjo_guy_1300.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  #mixing-page {
+    background: url(../images/placeholder/dash_400.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
 
-#blog-page {
-  background: url(../images/placeholder/dash_1300.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  #gear-page {
+    background: url(../images/placeholder/silver_mic_400.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
 
-#about-page {
-  background: url(../images/placeholder/sputnik_1300.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  #rehearsals-page {
+    background: url(../images/placeholder/concert_400.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
 
-#contact-page {
-  background: url(../images/placeholder/steering_wheel_1300.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  #rental-page {
+    background: url(../images/placeholder/lights_400.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #webcasts-page {
+    background: url(../images/placeholder/banjo_guy_400.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #blog-page {
+    background: url(../images/placeholder/dash_400.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #about-page {
+    background: url(../images/placeholder/sputnik_400.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #contact-page {
+    background: url(../images/placeholder/steering_wheel_400.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; } }
+@media only screen and (min-device-width: 700px) and (max-width: 50.699em) {
+  #show-sidebar {
+    display: none; }
+
+  .sidebar {
+    position: fixed;
+    z-index: 999;
+    right: 1%;
+    top: 30%; }
+    .sidebar ul {
+      list-style: none; }
+    .sidebar .nav-li {
+      margin-top: 10px;
+      text-align: center;
+      border: 1px solid #555;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background-color: #ddd; }
+      .sidebar .nav-li a {
+        margin: 2px 1px 0 0;
+        color: transparent;
+        text-decoration: none;
+        display: block; }
+    .sidebar .active {
+      border: 1px solid #FFEC6C;
+      background-color: #444; }
+      .sidebar .active a {
+        color: transparent; }
+    .sidebar .nav-popup {
+      -webkit-border-radius: 0.2em;
+      -moz-border-radius: 0.2em;
+      border-radius: 0.2em;
+      right: 35px;
+      display: none;
+      position: absolute;
+      background: #ddd;
+      padding: 12px;
+      font-size: 1.5em;
+      border: 1px solid #555; }
+    .sidebar .nav-popup:after, .sidebar .nav-popup:before {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none; }
+    .sidebar .nav-popup:after {
+      border-color: rgba(194, 225, 245, 0);
+      border-left-color: #ddd;
+      border-width: 9px;
+      margin-top: -9px; }
+    .sidebar .nav-popup:before {
+      border-color: rgba(194, 225, 245, 0);
+      border-left-color: #555;
+      border-width: 10px;
+      margin-top: -10px; }
+    .sidebar #nav-pointer {
+      font-size: 2em;
+      top: 50px;
+      right: 50px; }
+    .sidebar #popup-1 {
+      top: -5px; }
+    .sidebar #popup-2 {
+      top: 25px; }
+    .sidebar #popup-3 {
+      top: 55px; }
+    .sidebar #popup-4 {
+      top: 85px; }
+    .sidebar #popup-5 {
+      top: 115px; }
+    .sidebar #popup-6 {
+      top: 145px; }
+    .sidebar #popup-7 {
+      top: 175px; }
+    .sidebar #popup-8 {
+      top: 205px; }
+    .sidebar #popup-9 {
+      top: 235px; }
+    .sidebar #popup-10 {
+      top: 265px; }
+
+  .page {
+    width: 100%;
+    height: 150%; }
+
+  .content {
+    font-size: 1.5em;
+    text-align: justify;
+    color: #ddd;
+    width: 20%;
+    height: 100%; }
+    .content p {
+      padding-top: 20px; }
+
+  .content-background {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    background: url(../images/patterns/semi_transparent_background.png); }
+
+  .divider {
+    color: #888;
+    background-color: #333;
+    padding: 5px 0 5px 0;
+    font-size: 6em;
+    text-align: center;
+    text-shadow: #555 1px 1px 0px; }
+
+  #home {
+    color: #ddd;
+    background: url(../images/placeholder/sound_farm_1_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    #home h1 {
+      text-align: center;
+      font-size: 20em;
+      padding: 2%;
+      line-height: 0.9em;
+      letter-spacing: -10px; }
+
+  #recording-page {
+    background: url(../images/placeholder/fader_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #mixing-page {
+    background: url(../images/placeholder/dash_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #gear-page {
+    background: url(../images/placeholder/silver_mic_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #rehearsals-page {
+    background: url(../images/placeholder/concert_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #rental-page {
+    background: url(../images/placeholder/lights_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #webcasts-page {
+    background: url(../images/placeholder/banjo_guy_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #blog-page {
+    background: url(../images/placeholder/dash_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #about-page {
+    background: url(../images/placeholder/sputnik_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #contact-page {
+    background: url(../images/placeholder/steering_wheel_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; } }
+@media only screen and (min-device-width: 700px) and (min-width: 60em) {
+  #show-sidebar {
+    display: none; }
+
+  .sidebar {
+    position: fixed;
+    z-index: 999;
+    right: 1%;
+    top: 30%; }
+    .sidebar ul {
+      list-style: none; }
+    .sidebar .nav-li {
+      margin-top: 10px;
+      text-align: center;
+      border: 1px solid #555;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background-color: #ddd; }
+      .sidebar .nav-li a {
+        margin: 2px 1px 0 0;
+        color: transparent;
+        text-decoration: none;
+        display: block; }
+    .sidebar .active {
+      border: 1px solid #FFEC6C;
+      background-color: #444; }
+      .sidebar .active a {
+        color: transparent; }
+    .sidebar .nav-popup {
+      -webkit-border-radius: 0.2em;
+      -moz-border-radius: 0.2em;
+      border-radius: 0.2em;
+      right: 35px;
+      display: none;
+      position: absolute;
+      background: #ddd;
+      padding: 12px;
+      font-size: 1.5em;
+      border: 1px solid #555; }
+    .sidebar .nav-popup:after, .sidebar .nav-popup:before {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none; }
+    .sidebar .nav-popup:after {
+      border-color: rgba(194, 225, 245, 0);
+      border-left-color: #ddd;
+      border-width: 9px;
+      margin-top: -9px; }
+    .sidebar .nav-popup:before {
+      border-color: rgba(194, 225, 245, 0);
+      border-left-color: #555;
+      border-width: 10px;
+      margin-top: -10px; }
+    .sidebar #nav-pointer {
+      font-size: 2em;
+      top: 50px;
+      right: 50px; }
+    .sidebar #popup-1 {
+      top: -5px; }
+    .sidebar #popup-2 {
+      top: 25px; }
+    .sidebar #popup-3 {
+      top: 55px; }
+    .sidebar #popup-4 {
+      top: 85px; }
+    .sidebar #popup-5 {
+      top: 115px; }
+    .sidebar #popup-6 {
+      top: 145px; }
+    .sidebar #popup-7 {
+      top: 175px; }
+    .sidebar #popup-8 {
+      top: 205px; }
+    .sidebar #popup-9 {
+      top: 235px; }
+    .sidebar #popup-10 {
+      top: 265px; }
+
+  .page {
+    width: 100%;
+    height: 150%; }
+
+  .content {
+    font-size: 1.5em;
+    text-align: justify;
+    color: #ddd;
+    width: 20%;
+    height: 100%; }
+    .content p {
+      padding-top: 20px; }
+
+  .content-background {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    background: url(../images/patterns/semi_transparent_background.png); }
+
+  .divider {
+    color: #888;
+    background-color: #333;
+    padding: 5px 0 5px 0;
+    font-size: 6em;
+    text-align: center;
+    text-shadow: #555 1px 1px 0px; }
+
+  #home {
+    color: #ddd;
+    background: url(../images/placeholder/sound_farm_1_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    #home h1 {
+      text-align: center;
+      font-size: 20em;
+      padding: 2%;
+      line-height: 0.9em;
+      letter-spacing: -10px; }
+
+  #recording-page {
+    background: url(../images/placeholder/fader_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #mixing-page {
+    background: url(../images/placeholder/dash_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #gear-page {
+    background: url(../images/placeholder/silver_mic_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #rehearsals-page {
+    background: url(../images/placeholder/concert_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #rental-page {
+    background: url(../images/placeholder/lights_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #webcasts-page {
+    background: url(../images/placeholder/banjo_guy_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #blog-page {
+    background: url(../images/placeholder/dash_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #about-page {
+    background: url(../images/placeholder/sputnik_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+  #contact-page {
+    background: url(../images/placeholder/steering_wheel_1300.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; } }
