@@ -6,9 +6,78 @@
 html, body {
   height: 100%; }
 
+.info {
+  color: white;
+  font-size: 50px;
+  z-index: 10000;
+  position: fixed; }
+
+#position {
+  top: 0; }
+
+#height {
+  top: 55px; }
+
 @media only screen and (min-width: 100px) and (max-device-width: 700px) {
+  html {
+    -ms-touch-action: none; }
+
+  body {
+    overflow: hidden;
+    /* this is important to prevent the whole page to bounce */ }
+
+  #wrapper {
+    position: absolute;
+    z-index: 5000;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden; }
+
+  #scroller {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 15000px;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none; }
+
+  .page {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    .page div {
+      position: absolute;
+      width: 100%;
+      overflow: hidden;
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      -o-transform: translateZ(0);
+      transform: translateZ(0); }
+
   #show-sidebar {
-    z-index: 1000;
+    z-index: 10002;
     position: fixed;
     background-color: #FFEC6C;
     padding: 2px;
@@ -23,7 +92,7 @@ html, body {
     background-color: #FFEC6C;
     display: none;
     position: fixed;
-    z-index: 999;
+    z-index: 10001;
     right: 0;
     top: 0;
     height: 100%;
@@ -93,16 +162,11 @@ html, body {
       top: 795px;
       cursor: pointer; }
 
-  .page {
-    width: 100%;
-    height: 100%;
-    overflow: scroll; }
-
   .content {
-    font-size: 3em;
+    font-size: 4em;
     text-align: justify;
     color: #ddd;
-    width: 90%;
+    width: 50px;
     margin: 0 auto;
     padding-top: 10%;
     height: 150%; }
@@ -117,6 +181,8 @@ html, body {
     background: url(../images/patterns/semi_transparent_background.png); }
 
   .divider {
+    position: fixed;
+    width: 100%;
     color: #888;
     background-color: #333;
     padding: 5px 0 5px 0;
@@ -124,8 +190,48 @@ html, body {
     text-align: center;
     text-shadow: #555 1px 1px 0px; }
 
+  #recording {
+    z-index: 3;
+    top: 1800px; }
+
+  #mixing {
+    z-index: 4;
+    top: 1800px; }
+
+  #gear {
+    z-index: 5;
+    top: 1800px; }
+
+  #rehearsals {
+    z-index: 6;
+    top: 1800px; }
+
+  #rental {
+    z-index: 7;
+    top: 1800px; }
+
+  #webcasts {
+    z-index: 8;
+    top: 1800px; }
+
+  #blog {
+    z-index: 9;
+    top: 1800px; }
+
+  #about {
+    z-index: 10;
+    top: 1800px; }
+
+  #contact {
+    z-index: 11;
+    top: 1800px; }
+
   #home {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
     color: #ddd;
+    overflow: hidden;
     background: url(../images/placeholder/sound_farm_1_400.png) no-repeat center;
     background-size: cover; }
     #home h1 {
@@ -136,6 +242,9 @@ html, body {
       letter-spacing: -10px; }
 
   #recording-page {
+    position: fixed;
+    top: 1800px;
+    z-index: 2;
     background: url(../images/placeholder/fader_400.png) no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -143,6 +252,9 @@ html, body {
     background-size: cover; }
 
   #mixing-page {
+    position: fixed;
+    top: 1800px;
+    z-index: 3;
     background: url(../images/placeholder/dash_400.png) no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -150,6 +262,9 @@ html, body {
     background-size: cover; }
 
   #gear-page {
+    position: fixed;
+    top: 1800px;
+    z-index: 4;
     background: url(../images/placeholder/silver_mic_400.png) no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -157,6 +272,9 @@ html, body {
     background-size: cover; }
 
   #rehearsals-page {
+    position: fixed;
+    top: 1800px;
+    z-index: 5;
     background: url(../images/placeholder/concert_400.png) no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -164,6 +282,9 @@ html, body {
     background-size: cover; }
 
   #rental-page {
+    position: fixed;
+    top: 1800px;
+    z-index: 6;
     background: url(../images/placeholder/lights_400.png) no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -171,6 +292,9 @@ html, body {
     background-size: cover; }
 
   #webcasts-page {
+    position: fixed;
+    top: 1800px;
+    z-index: 7;
     background: url(../images/placeholder/banjo_guy_400.png) no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -178,6 +302,9 @@ html, body {
     background-size: cover; }
 
   #blog-page {
+    position: fixed;
+    top: 1800px;
+    z-index: 8;
     background: url(../images/placeholder/dash_400.png) no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -185,6 +312,9 @@ html, body {
     background-size: cover; }
 
   #about-page {
+    position: fixed;
+    top: 1800px;
+    z-index: 9;
     background: url(../images/placeholder/sputnik_400.png) no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -192,6 +322,9 @@ html, body {
     background-size: cover; }
 
   #contact-page {
+    position: fixed;
+    top: 1800px;
+    z-index: 10;
     background: url(../images/placeholder/steering_wheel_400.png) no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
