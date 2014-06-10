@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <head>
   <title>Sound Farm</title>
-
+  <meta name="viewport" content="minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  
   <link rel="shortcut icon" href="favicon.png"  />
   <link rel="stylesheet" type="text/css" href="/public/css/reset.css">
   <link rel="stylesheet" type="text/css" href="/public/css/custom.css">
@@ -13,6 +15,14 @@
   var myScroll;
 
   function loaded () {
+    window.addEventListener("load",function() {
+      // Set a timeout...
+      setTimeout(function(){
+        // Hide the address bar!
+        window.scrollTo(0, 1);
+      }, 0);
+    });
+
     if (matchMedia('only screen and (max-device-width: 700px)').matches) {
       myScroll = new IScroll('#wrapper', {
         mouseWheel: false,
@@ -20,43 +30,68 @@
         probeType: 2});
 
       myScroll.on('scroll', function() {
+
+
         console.log(this.y);
+        var pagePad = 800;
         var dividerHeight = $('.divider').outerHeight();
-        var height = $('.page').outerHeight() + $('.divider').outerHeight();
+        var pageHeight = $('#contact-page').outerHeight() + pagePad; 
+        var totalHeight = dividerHeight + pageHeight;
         
-        if(this.y > height * -1) {
-          $('#recording-page').css('top', this.y + height + dividerHeight);        
-          $('#recording').css('top', this.y + height);        
-        } else if(this.y > (-2 * height) && this.y < (-1 * height)) {
-          $('#mixing-page').css('top', this.y + (height * 2) + dividerHeight);
-          $('#mixing').css('top', this.y + (height * 2));
-        } else if(this.y > (-3 * height) && this.y < (-2 * height)) {
-          $('#gear-page').css('top', this.y + (height * 3) + dividerHeight);
-          $('#gear').css('top', this.y + (height * 3));
-        } else if(this.y > (-4 * height) && this.y < (-3 * height)) {
-          $('#rehearsals-page').css('top', this.y + (height * 4) + dividerHeight);
-          $('#rehearsals').css('top', this.y + (height * 4));
-        } else if(this.y > (-5 * height) && this.y < (-4 * height)) {
-          $('#rental-page').css('top', this.y + (height * 5) + dividerHeight);
-          $('#rental').css('top', this.y + (height * 5));
-        } else if(this.y > (-6 * height) && this.y < (-5 * height)) {
-          $('#webcasts-page').css('top', this.y + (height * 6) + dividerHeight);
-          $('#webcasts').css('top', this.y + (height * 6));
-        } else if(this.y > (-7 * height) && this.y < (-6 * height)) {
-          $('#blog-page').css('top', this.y + (height * 7) + dividerHeight);
-          $('#blog').css('top', this.y + (height * 7));
-        } else if(this.y > (-8 * height) && this.y < (-7 * height)) {
-          $('#about-page').css('top', this.y + (height * 8) + dividerHeight);
-          $('#about').css('top', this.y + (height * 8));
-        } else if(this.y > (-9 * height) && this.y < (-8 * height)) {
-          $('#contact-page').css('top', this.y + (height * 9) + dividerHeight);
-          $('#contact').css('top', this.y + (height * 9));
-        }
-        ;
+        $('#recording').css('top', this.y + pageHeight);    
+        $('#mixing').css('top', this.y + (pageHeight * 2));
+        $('#gear').css('top', this.y + (pageHeight * 3));
+        $('#rehearsals').css('top', this.y + (pageHeight * 4));
+        $('#rental').css('top', this.y + (pageHeight * 5));
+        $('#webcasts').css('top', this.y + (pageHeight * 6));
+        $('#blog').css('top', this.y + (pageHeight * 7));
+        $('#about').css('top', this.y + (pageHeight * 8));
+        $('#contact').css('top', this.y + (pageHeight * 9));
+
+        $('#recording-content').css('top', this.y + pageHeight);
+        $('#mixing-content').css('top', this.y + (pageHeight * 2));
+        $('#gear-content').css('top', this.y + (pageHeight * 3));
+        $('#rehearsals-content').css('top', this.y + (pageHeight * 4));
+        $('#rental-content').css('top', this.y + (pageHeight * 5));
+        $('#webcasts-content').css('top', this.y + (pageHeight * 6));
+        $('#blog-content').css('top', this.y + (pageHeight * 7));
+        $('#about-content').css('top', this.y + (pageHeight * 8));
+        $('#contact-content').css('top', this.y + (pageHeight * 9));
+
+        if(this.y > (-1 * pageHeight) && this.y < (pagePad * -1)) {
+          $('#home').css('height', (pageHeight + this.y));
+        } else if(this.y > (-2 * pageHeight) && this.y < (-1 * pageHeight - pagePad)) {
+          $('#recording-page').css('height', this.y + (pageHeight * 2));
+          $('#home').css('height', 0);
+        } else if(this.y > (-3 * pageHeight) && this.y < (-2 * pageHeight - pagePad)) {
+          $('#mixing-page').css('height', this.y + (pageHeight * 3));
+          $('#recording-page').css('height', 0);
+        } else if(this.y > (-4 * pageHeight) && this.y < (-3 * pageHeight - pagePad)) {
+          $('#gear-page').css('height', this.y + (pageHeight * 4));
+          $('#mixing-page').css('height', 0);
+        } else if(this.y > (-5 * pageHeight) && this.y < (-4 * pageHeight - pagePad)) {
+          $('#rehearsals-page').css('height', this.y + (pageHeight * 5));
+          $('#gear-page').css('height', 0);
+        } else if(this.y > (-6 * pageHeight) && this.y < (-5 * pageHeight - pagePad)) {
+          $('#rental-page').css('height', this.y + (pageHeight * 6));
+          $('#rehearsals-page').css('height', 0);
+        } else if(this.y > (-7 * pageHeight) && this.y < (-6 * pageHeight - pagePad)) {
+          $('#webcasts-page').css('height', this.y + (pageHeight * 7));
+          $('#rental-page').css('height', 0);
+        } else if(this.y > (-8 * pageHeight) && this.y < (-7 * pageHeight - pagePad)) {
+          $('#blog-page').css('height', this.y + (pageHeight * 8));
+          $('#webcasts-page').css('height', 0);
+        } else if(this.y > (-9 * pageHeight) && this.y < (-8 * pageHeight - pagePad)) {
+          $('#about-page').css('height', this.y + (pageHeight * 9));
+          $('#blog-page').css('height', 0); 
+        } else {
+          $('#about-page').css('height', 0);
+        };
+        
 
 
         // $('#position').html('position: ' + this.y);
-        // $('#height').html('height: ' + height);
+        // $('#height').html('height: ' + pageHeight);
       });
     };   
   }

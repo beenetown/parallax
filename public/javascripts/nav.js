@@ -35,7 +35,7 @@ $(document).ready(function() {
     popup();
   } else {
     $('nav-popup').click(function(e) {
-      e.preventDefault();
+      // e.preventDefault();
       id = /\d/.exec($(this).attr('id'));
       // alert('#' + id);
       $('li#' + id + ' a').click();
@@ -44,13 +44,13 @@ $(document).ready(function() {
   navPointer();
   $(window).scrollTop();
   $(window).scroll(setNavandFade);
-  $('#home h1').fadeOut(7000);
-  $('#menu').fadeIn(7000);
+  // $('#home h1').fadeOut(7000);
+  // $('#menu').fadeIn(7000);
   $('.nav-li').click(function() {
     $('.page').css({'opacity': '1'});
   });
 
-  $('#show-sidebar').click(function() {
-    $('.sidebar').toggle();
+  $('#show-navbar').click(function() {
+    $('.navbar').toggle();
   });
 });

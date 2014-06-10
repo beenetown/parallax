@@ -22,6 +22,13 @@ border-radius: $radius $radius 0 0;
   -o-background-size: cover;
   background-size: cover;
 }
+$lightGray: #aaa;
+$mediumGray: #555;
+$darkGray: #333;
+
+$highlight: #FFEC6C;
+
+
 
 *, *:before, *:after {@include box_sizing;}
 
@@ -88,6 +95,7 @@ html, body{height:100%;}
     width: 100%;
     height: 100%;
     overflow: hidden;
+    top: 0;
     div {
       position: absolute;
       width: 100%;
@@ -101,7 +109,7 @@ html, body{height:100%;}
   }
 
 
-  #show-sidebar {
+  #show-navbar {
     z-index: 10002;
     position: fixed;
     background-color: #FFEC6C;
@@ -114,7 +122,7 @@ html, body{height:100%;}
       width: 100%;
     }
   }
-  .sidebar {
+  .navbar {
     background-color: #FFEC6C;
     display: none;
     position: fixed;
@@ -186,27 +194,36 @@ html, body{height:100%;}
   }
 
   .content {
+    position: fixed;
+    padding-top: 100px;
+    width: 150px;
+    height: 100%;
+    z-index: 100;
+    // top: 1800px;
     font-size: 4em;
-    text-align: justify;
-    color: #ddd;
-    width: 50px;
-    margin: 0 auto;
-    padding-top: 10%;
+    // text-align: justify;
+    color: #444;
+    // width: 50px;
+    // margin: 0 auto;
+    // padding-top: 10%;
     // margin-left: 10%;
-    height: 150%;
+    // height: 150%;
     // overflow: scroll;
     p {
       padding-top: 20px;
     }
   }
 
+  .content-spacer {display: none;}
+
   .content-background {
-    @include rounded;
+    // @include rounded;
     padding: 10px;
     // height: 100%;
     // width: 100%;
     // opacity: 0.7;
-    background: url(../images/patterns/semi_transparent_background.png);
+    background: url(../images/patterns/semi_transparent_50.png);
+    // background-color: white;
   }
 
   .divider {
@@ -222,22 +239,22 @@ html, body{height:100%;}
   }
 
   #recording {
-    z-index: 3; 
+    z-index: 11; 
     top: 1800px;
   }
 
   #mixing {
-    z-index: 4; 
+    z-index: 10; 
     top: 1800px;
   }
 
   #gear {
-    z-index: 5; 
+    z-index: 9; 
     top: 1800px;
   }
 
   #rehearsals {
-    z-index: 6; 
+    z-index: 8; 
     top: 1800px;
   }
 
@@ -247,22 +264,22 @@ html, body{height:100%;}
   }
 
   #webcasts {
-    z-index: 8; 
+    z-index: 6; 
     top: 1800px;
   }
 
   #blog {
-    z-index: 9; 
+    z-index: 5; 
     top: 1800px;
   }
 
   #about {
-    z-index: 10; 
+    z-index: 4; 
     top: 1800px;
   }
 
   #contact {
-    z-index: 11; 
+    z-index: 3; 
     top: 1800px;
   }
 
@@ -270,14 +287,14 @@ html, body{height:100%;}
 
   #home {
     position: fixed;
-    z-index: 1;
-    width: 100%;
+    z-index: 10;
+    // max-width: 100%;
+    // height: 100px;
     // height: 400px;
     color: #ddd;
-    overflow: hidden;
-    background: url(../images/placeholder/sound_farm_1_400.png) no-repeat center; 
-    background-size: cover;
-    // @include backgroundSize;
+    // overflow: hidden;
+    background: url(../images/home/home_portrait.png) no-repeat; 
+    @include backgroundSize;
     h1 { 
       text-align: center;
       font-size: 20em;
@@ -289,82 +306,83 @@ html, body{height:100%;}
 
   #recording-page {
     position: fixed;
-    top: 1800px;
-    z-index: 2;
-    background: url(../images/placeholder/fader_400.png) no-repeat; 
+    top: 0;
+    z-index: 9;
+    // overflow: hidden;
+    background: url(../images/placeholder/fader_portrait.png) no-repeat; 
     @include backgroundSize;
 
   }
 
   #mixing-page {
     position: fixed;
-    top: 1800px;
-    z-index: 3;
-    background: url(../images/placeholder/dash_400.png) no-repeat; 
+    top: 0;
+    z-index: 8;
+    background: url(../images/placeholder/dash_portrait.png) no-repeat; 
     @include backgroundSize;
   }
 
   #gear-page {
     position: fixed;
-    top: 1800px;
-    z-index: 4; 
-    background: url(../images/placeholder/silver_mic_400.png) no-repeat; 
+    top: 0;
+    z-index: 7; 
+    background: url(../images/placeholder/silver_mic_portrait.png) no-repeat; 
     @include backgroundSize;
   }
 
   #rehearsals-page {
     position: fixed;
-    top: 1800px;
-    z-index: 5;
-    background: url(../images/placeholder/concert_400.png) no-repeat; 
+    top: 0;
+    z-index: 6;
+    background: url(../images/placeholder/concert_portrait.png) no-repeat; 
     @include backgroundSize;
   }
 
   #rental-page {
     position: fixed;
-    top: 1800px;
-    z-index: 6;
-    background: url(../images/placeholder/lights_400.png) no-repeat; 
+    top: 0;
+    z-index: 5;
+    background: url(../images/placeholder/lights_portrait.png) no-repeat; 
     @include backgroundSize;
   }
 
   #webcasts-page {
     position: fixed;
-    top: 1800px;
-    z-index: 7;
-    background: url(../images/placeholder/banjo_guy_400.png) no-repeat; 
+    top: 0;
+    z-index: 4;
+    background: url(../images/placeholder/banjo_guy_portrait.png) no-repeat; 
     @include backgroundSize;
   }
 
   #blog-page {
     position: fixed;
-    top: 1800px;
-    z-index: 8;
-    background: url(../images/placeholder/dash_400.png) no-repeat; 
+    top: 0;
+    z-index: 3;
+    background: url(../images/placeholder/dash_portrait.png) no-repeat; 
     @include backgroundSize;  
   }
 
   #about-page {
     position: fixed;
-    top: 1800px;
-    z-index: 9;
-    background: url(../images/placeholder/sputnik_400.png) no-repeat; 
+    top: 0;
+    z-index: 2;
+    background: url(../images/placeholder/sputnik_portrait.png) no-repeat; 
     @include backgroundSize;
   }
 
   #contact-page {
     position: fixed;
-    top: 1800px;
-    z-index: 10;
-    background: url(../images/placeholder/steering_wheel_400.png) no-repeat; 
+    top: 0;
+    z-index: 1;
+    background: url(../images/placeholder/steering_wheel_portrait.png) no-repeat; 
     @include backgroundSize;  
   }
 }
 
 //medium screens
 @media only screen and (min-device-width: 700px) and (max-width: 50.699em) {
-  #show-sidebar {display: none;}
-  .sidebar {
+  #show-navbar {display: none;}
+  .navbar {
     position: fixed;
     z-index: 999;
     right: 1%;
@@ -556,94 +574,45 @@ html, body{height:100%;}
 
 //large screens
 @media only screen and (min-device-width: 700px) and (min-width: 60em) {
-  #show-sidebar {display: none;}
-  .sidebar {
+  #show-navbar {display: none;}
+  .navbar {
     position: fixed;
     z-index: 999;
-    right: 1%;
-    top: 30%;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background: url(../images/patterns/semi_transparent_50.png);
+    // background-color: $darkGray;
+
+    // box-shadow: 0px 0px 2px 0px $mediumGray;
     ul {
+      float: right;
       list-style: none;
     }
 
     .nav-li {
-      margin-top: 10px;
+      font-size: 1.2em;
+      display: inline-block;
+      margin: 2px 10px 0 0;
+      padding: 1px;
       text-align: center;
-      border: 1px solid #555;
       cursor: pointer;
-      width: 20px;
-      height: 20px;
-      @include rounded(50%);
-      background-color: #ddd;
       a {
         margin: 2px 1px 0 0;
-        color: transparent;
+        color: $mediumGray;
         text-decoration: none;
         display: block;
       }
     }
 
     .active {
-      border: 1px solid #FFEC6C;
-        background-color: #444; 
+      border: 1px solid $highlight;
+      // background-color: $darkGray; 
+      @include rounded(0.1em);
       a {
-        color: transparent;
+        color: $darkGray;
       }
     }
-
-    
-    .nav-popup {
-      @include rounded(0.2em);
-      right: 35px;
-      display: none;
-      position: absolute;
-      background: #ddd;
-      padding: 12px;
-      font-size: 1.5em;
-      border: 1px solid #555;
-    }
-    
-    .nav-popup:after, .nav-popup:before {
-      left: 100%;
-      top: 50%;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-    }
-
-    .nav-popup:after {
-      border-color: rgba(194, 225, 245, 0);
-      border-left-color: #ddd;
-      border-width: 9px;
-      margin-top: -9px;
-    }
-
-    .nav-popup:before {
-      border-color: rgba(194, 225, 245, 0);
-      border-left-color: #555;
-      border-width: 10px;
-      margin-top: -10px;
-    }
-
-    #nav-pointer {
-      font-size: 2em;
-      top: 50px;
-      right: 50px;
-    }
-
-    #popup-1 {top: -5px;}
-    #popup-2 {top: 25px;}
-    #popup-3 {top: 55px;}
-    #popup-4 {top: 85px;}
-    #popup-5 {top: 115px;}
-    #popup-6 {top: 145px;}
-    #popup-7 {top: 175px;}
-    #popup-8 {top: 205px;}
-    #popup-9 {top: 235px;}
-    #popup-10 {top: 265px;}
   }
 
   .page {
@@ -652,43 +621,48 @@ html, body{height:100%;}
   }
 
   .content {
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: justify;
-    color: #ddd;
-    width: 20%;
+    color: $darkGray;
+    width: 100%;
+    margin: 0 auto;
+    // margin-top: 5%;
+    // background-color: transparent;
     // padding-top: 10%;
     // margin-left: 10%;
-    height: 100%;
+    // height: 100%;
     p {
-      padding-top: 20px;
+      // padding-top: 20px;
     }
   }
+
+  .content-spacer {height: 0px; width: 100%;}
+
   .content-background {
     // @include rounded;
-    padding: 10px;
+    padding: 10px 10% 10px 10%;
     height: 100%;
     width: 100%;
-    opacity: 0.7;
-    background: url(../images/patterns/semi_transparent_background.png);
+    background: url(../images/patterns/semi_transparent_50.png);
   }
 
   .divider {
-    color: #888;
-    background-color: #333;
-    padding: 5px 0 5px 0;
+    color: $lightGray;
+    background-color: $darkGray;
+    padding: 15px 0 15px 0;
     font-size: 6em;
     text-align: center;
-    text-shadow: #555 1px 1px 0px;
+    text-shadow: $mediumGray 1px 1px 0px;
   }
 
   #home {
-    color: #ddd;
-    background: url(../images/placeholder/sound_farm_1_1300.png) no-repeat center center fixed; 
+    color: $lightGray;
+    background: url(../images/home/home_1300.png) no-repeat center center fixed; 
     @include backgroundSize;
     h1 { 
       text-align: center;
       font-size: 20em;
-      padding: 2%;
+      padding: 5%;
       line-height: 0.9em;
       letter-spacing: -10px;
     }
