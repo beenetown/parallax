@@ -1,116 +1,80 @@
-function fadeActivePage() {
-
-}
-
 function numberPages() {
-  if (!$('page_1')[0]) {
-    $('.page').each(function(index) {
-      $(this).addClass("page_" + (index + 1));
-      // console.log("page_" + (index + 1));
-    });
-  }
+  $('.page').each(function(index) {
+    $(this).addClass("page-" + (index + 1));
+  });
 };
 
+function numberNavs() {
+  $('.nav-li').each(function(index) {
+    $(this).addClass("nav-" + (index + 1));
+  });
+};
+
+// should fire on resize, too. Currently, does not.
 function setNavandFade() {
-  //this dynamically sets a page height
+  // this dynamically sets a page height
   var pages = [0]
   $('.page').each(function(index) {
     pages[index+1] = $(this).outerHeight() + pages[index];
-    // console.log(pages[index+1]);
   });
 
   $(window).scroll(function() {
     if ($(window).scrollTop() < pages[1]) {
-      if($('#home') != $('.active').attr('id')){
         $('.nav-li').removeClass('active');
-        $('#1').addClass('active');
-      };
+        $('.nav-1').addClass('active');
+        $('.page-1').css('opacity', (pages[1] - $(window).scrollTop())/600);
     } else if ($(window).scrollTop() < pages[2] && $(window).scrollTop() >= pages[1]) {
-      if($('#studio-page') != $('.active').attr('id')){
         $('.nav-li').removeClass('active');
-        $('#2').addClass('active');
-      };
+        $('.nav-2').addClass('active');
+        $('.page-2').css('opacity', (pages[2] - $(window).scrollTop())/600);
     } else if ($(window).scrollTop() < pages[3] && $(window).scrollTop() >= pages[2]) {
-      if($('#gear-page') != $('.active').attr('id')){
         $('.nav-li').removeClass('active');
-        $('#3').addClass('active');
-      };
+        $('.nav-3').addClass('active');
+        $('.page-3').css('opacity', (pages[3] - $(window).scrollTop())/600);
     } else if ($(window).scrollTop() < pages[4] && $(window).scrollTop() >= pages[3]) {
-      if($('#live-page') != $('.active').attr('id')){
         $('.nav-li').removeClass('active');
-        $('#4').addClass('active');
-      };
+        $('.nav-4').addClass('active');
+        $('.page-4').css('opacity', (pages[4] - $(window).scrollTop())/600);
     } else if ($(window).scrollTop() < pages[5] && $(window).scrollTop() >= pages[4]) {
-      if($('#about-page') != $('.active').attr('id')){
         $('.nav-li').removeClass('active');
-        $('#5').addClass('active');
-      };
+        $('.nav-5').addClass('active');
+        $('.page-5').css('opacity', (pages[5] - $(window).scrollTop())/600);
     } else if ($(window).scrollTop() < pages[6] && $(window).scrollTop() >= pages[5]) {
-      if($('#contact-page') != $('.active').attr('id')){
         $('.nav-li').removeClass('active');
-        $('#6').addClass('active');
-      };
+        $('.nav-6').addClass('active');
+        $('.page-6').css('opacity', (pages[6] - $(window).scrollTop())/600);
     };
-
   });
-
-
-
-  // var pageHeight = $('.page').outerHeight();
-  // var dividerHeight = $('.divider').outerHeight();
-  // var totalHeight = pageHeight + dividerHeight;
-
-  // var page = Math.ceil(($(window).scrollTop() - (pageHeight*0.995))/pageHeight) + 1;
-  // if (('#'+ page) != $('.active').attr('id')) {
-  //   $('.nav-li').removeClass('active');
-  //   $('#' + page).addClass('active');
-    // $('.' + page).css({'opacity':(((page * totalHeight)-$(window).scrollTop())/600)});
-  // };
 };
 
-function navPointer() {
-  var visited = sessionStorage["visited"]
-  if(!visited) {
-    sessionStorage["visited"] = true
-    window.setTimeout(function() {
-      $('#nav-pointer').fadeIn(2000);
-      $('#nav-pointer').fadeOut(5000);
-    }, 5000);
-  };
-};
-
-function popup() {
-  $('.nav-li').hover(function() {
-    id = $(this).attr('id');
-    $('#popup-' + id).toggle();
+// this should also fire on resize
+function setColumnHeight() {
+  var tallest;
+  $('.page').each(function() {
+    tallest = 0;
+    $(this).children('.section').each(function() {
+    console.log($(this).attr('id'));
+      if ($(this).innerHeight() > tallest) {
+        tallest = $(this).innerHeight();
+      };
+    })
+    $(this).children('.section').css('height', tallest + 'px');
   });
-}
-
+};
 
 $(document).ready(function() {
-
+  setColumnHeight();
   numberPages();
+  numberNavs();
   setNavandFade();
+
   if (!matchMedia('only screen and (max-device-width: 700px)').matches) {
-    popup();
-  } else {
-    $('nav-popup').click(function(e) {
-      // e.preventDefault();
-      id = /\d/.exec($(this).attr('id'));
-      // alert('#' + id);
-      $('li#' + id + ' a').click();
+    $('#show-navbar').click(function() {
+      $('.navbar').toggle();
     });
   };
-  navPointer();
-  // $(window).scrollTop();
-  // $(window).scroll(setNavandFade);
-  // $('#home h1').fadeOut(7000);
-  // $('#menu').fadeIn(7000);
+
   $('.nav-li').click(function() {
     $('.page').css({'opacity': '1'});
-  });
-
-  $('#show-navbar').click(function() {
-    $('.navbar').toggle();
   });
 });
