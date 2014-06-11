@@ -44,9 +44,8 @@
         $('#rehearsals').css('top', this.y + (pageHeight * 4));
         $('#rental').css('top', this.y + (pageHeight * 5));
         $('#webcasts').css('top', this.y + (pageHeight * 6));
-        $('#blog').css('top', this.y + (pageHeight * 7));
-        $('#about').css('top', this.y + (pageHeight * 8));
-        $('#contact').css('top', this.y + (pageHeight * 9));
+        $('#about').css('top', this.y + (pageHeight * 7));
+        $('#contact').css('top', this.y + (pageHeight * 8));
 
         $('#recording-content').css('top', this.y + pageHeight);
         $('#mixing-content').css('top', this.y + (pageHeight * 2));
@@ -54,9 +53,8 @@
         $('#rehearsals-content').css('top', this.y + (pageHeight * 4));
         $('#rental-content').css('top', this.y + (pageHeight * 5));
         $('#webcasts-content').css('top', this.y + (pageHeight * 6));
-        $('#blog-content').css('top', this.y + (pageHeight * 7));
-        $('#about-content').css('top', this.y + (pageHeight * 8));
-        $('#contact-content').css('top', this.y + (pageHeight * 9));
+        $('#about-content').css('top', this.y + (pageHeight * 7));
+        $('#contact-content').css('top', this.y + (pageHeight * 8));
 
         if(this.y > (-1 * pageHeight) && this.y < (pagePad * -1)) {
           $('#home').css('height', (pageHeight + this.y));
@@ -78,18 +76,13 @@
         } else if(this.y > (-7 * pageHeight) && this.y < (-6 * pageHeight - pagePad)) {
           $('#webcasts-page').css('height', this.y + (pageHeight * 7));
           $('#rental-page').css('height', 0);
-        } else if(this.y > (-8 * pageHeight) && this.y < (-7 * pageHeight - pagePad)) {
-          $('#blog-page').css('height', this.y + (pageHeight * 8));
+        } else if(this.y > (-8 * pageHeight + pagePad) && this.y < (-7 * pageHeight - pagePad)) {
+          $('#about-page').css('height', this.y + (pageHeight * 8));
           $('#webcasts-page').css('height', 0);
-        } else if(this.y > (-9 * pageHeight) && this.y < (-8 * pageHeight - pagePad)) {
-          $('#about-page').css('height', this.y + (pageHeight * 9));
-          $('#blog-page').css('height', 0); 
         } else {
           $('#about-page').css('height', 0);
         };
         
-
-
         // $('#position').html('position: ' + this.y);
         // $('#height').html('height: ' + pageHeight);
       });

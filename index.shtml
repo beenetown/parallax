@@ -6,13 +6,9 @@
     </div>
     <!--#include virtual="/partials/navbar.html" -->
     <!--#include virtual="/partials/pages/home.html" -->  
-    <!--#include virtual="/partials/pages/recording.html" -->  
-    <!--#include virtual="/partials/pages/mixing.html" -->
+    <!--#include virtual="/partials/pages/studio.html" -->  
     <!--#include virtual="/partials/pages/gear.html" -->  
-    <!--#include virtual="/partials/pages/rehearsals.html" -->  
-    <!--#include virtual="/partials/pages/rental.html" -->  
-    <!--#include virtual="/partials/pages/webcasts.html" -->
-    <!-- virtual="/partials/pages/blog.html" -->
+    <!--#include virtual="/partials/pages/live.html" -->  
     <!--#include virtual="/partials/pages/about.html" -->
     <!--#include virtual="/partials/pages/contact.html" --> 
     <!-- ==========footer=========== -->
