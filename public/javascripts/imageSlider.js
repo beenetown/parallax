@@ -1,17 +1,15 @@
 
 function timedSlider(images, time) {
   var i = 0;
-  $('#timedSlider').html("<img src='public/images/carousel" + images[i] + "'>"); 
-
   setInterval(function(){
     i ++;
     if(i >= images.length) {
       i = 0;
     };
-    $('#timedSlider').html("<img src='public/images/carousel" + images[i] + "'>"); 
+    $('#home').css('background', "url('/public/images/large/" + images[i] + "') no-repeat center center fixed");
   }, time);
 }
 
 $(document).ready(function(){
-  timedSlider(['photo.png', 'photo-2.png'], 5000);
+  timedSlider(['acoustic_1920.png', 'desk_1920.png', 'drums_1920.png', 'mics_1920.png', 'speakers_1920.png', 'home_1300.png'], 7000);
 });

@@ -1,3 +1,6 @@
+.hidden {
+  visibility: hidden; }
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -18,320 +21,6 @@ html, body {
 #height {
   top: 55px; }
 
-@media only screen and (min-width: 100px) and (max-device-width: 700px) {
-  html {
-    -ms-touch-action: none; }
-
-  body {
-    overflow: hidden;
-    /* this is important to prevent the whole page to bounce */ }
-
-  #wrapper {
-    position: absolute;
-    z-index: 5000;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden; }
-
-  #scroller {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 10000;
-    width: 100%;
-    height: 15000px;
-    overflow: hidden;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
-    -ms-text-size-adjust: none;
-    -o-text-size-adjust: none;
-    text-size-adjust: none; }
-
-  .page {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    top: 0; }
-    .page div {
-      position: absolute;
-      width: 100%;
-      overflow: hidden;
-      -webkit-transform: translateZ(0);
-      -moz-transform: translateZ(0);
-      -ms-transform: translateZ(0);
-      -o-transform: translateZ(0);
-      transform: translateZ(0); }
-
-  #show-navbar {
-    z-index: 10002;
-    position: fixed;
-    background-color: #FFEC6C;
-    padding: 2px;
-    top: 10px;
-    right: 10px;
-    width: 10%;
-    display: inline; }
-    #show-navbar img {
-      width: 100%; }
-
-  .navbar {
-    background-color: #FFEC6C;
-    display: none;
-    position: fixed;
-    z-index: 10001;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 60%; }
-    .navbar .nav {
-      height: 60%;
-      width: 90%;
-      margin: 0 auto;
-      margin-top: 30%; }
-      .navbar .nav ul {
-        list-style: none; }
-    .navbar .nav-li {
-      width: 100%;
-      border: 1px solid #555;
-      cursor: pointer;
-      margin-top: 10px;
-      height: 60px;
-      background-color: #ddd; }
-      .navbar .nav-li a {
-        height: 100%;
-        color: transparent;
-        text-decoration: none;
-        display: block;
-        cursor: pointer; }
-    .navbar .active {
-      border: 1px solid #FFEC6C;
-      background-color: #444; }
-      .navbar .active a {
-        color: transparent; }
-    .navbar .nav-popup {
-      z-index: 1001;
-      position: fixed;
-      margin-top: 10px;
-      font-size: 4em;
-      left: 455px;
-      cursor: pointer; }
-    .navbar #nav-pointer {
-      top: 90px; }
-    .navbar #popup-1 {
-      top: 165px;
-      cursor: pointer; }
-    .navbar #popup-2 {
-      top: 235px;
-      cursor: pointer; }
-    .navbar #popup-3 {
-      top: 305px;
-      cursor: pointer; }
-    .navbar #popup-4 {
-      top: 375px;
-      cursor: pointer; }
-    .navbar #popup-5 {
-      top: 445px;
-      cursor: pointer; }
-    .navbar #popup-6 {
-      top: 515px;
-      cursor: pointer; }
-    .navbar #popup-7 {
-      top: 585px;
-      cursor: pointer; }
-    .navbar #popup-8 {
-      top: 655px;
-      cursor: pointer; }
-    .navbar #popup-9 {
-      top: 725px;
-      cursor: pointer; }
-    .navbar #popup-10 {
-      top: 795px;
-      cursor: pointer; }
-
-  .content {
-    position: fixed;
-    padding-top: 100px;
-    width: 150px;
-    height: 100%;
-    z-index: 100;
-    font-size: 4em;
-    color: #444; }
-    .content p {
-      padding-top: 20px; }
-
-  .content-spacer {
-    display: none; }
-
-  .content-background {
-    padding: 10px;
-    background: url(../images/patterns/semi_transparent_80.png); }
-
-  .divider {
-    position: fixed;
-    width: 100%;
-    color: #888;
-    background-color: #333;
-    padding: 5px 0 5px 0;
-    font-size: 7em;
-    text-align: center;
-    text-shadow: #555 1px 1px 0px; }
-
-  #recording {
-    z-index: 11;
-    top: 1800px; }
-
-  #mixing {
-    z-index: 10;
-    top: 1800px; }
-
-  #gear {
-    z-index: 9;
-    top: 1800px; }
-
-  #rehearsals {
-    z-index: 8;
-    top: 1800px; }
-
-  #rental {
-    z-index: 7;
-    top: 1800px; }
-
-  #webcasts {
-    z-index: 6;
-    top: 1800px; }
-
-  #blog {
-    z-index: 5;
-    top: 1800px; }
-
-  #about {
-    z-index: 4;
-    top: 1800px; }
-
-  #contact {
-    z-index: 3;
-    top: 1800px; }
-
-  #home {
-    position: fixed;
-    z-index: 10;
-    color: #ddd;
-    background: url(../images/home/home_portrait.png) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-    #home h1 {
-      text-align: center;
-      font-size: 20em;
-      padding: 2%;
-      line-height: 0.9em;
-      letter-spacing: -10px; }
-
-  #recording-page {
-    position: fixed;
-    top: 0;
-    z-index: 9;
-    background: url(../images/placeholder/fader_portrait.png) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #mixing-page {
-    position: fixed;
-    top: 0;
-    z-index: 8;
-    background: url(../images/placeholder/dash_portrait.png) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #gear-page {
-    position: fixed;
-    top: 0;
-    z-index: 7;
-    background: url(../images/placeholder/silver_mic_portrait.png) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #rehearsals-page {
-    position: fixed;
-    top: 0;
-    z-index: 6;
-    background: url(../images/placeholder/concert_portrait.png) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #rental-page {
-    position: fixed;
-    top: 0;
-    z-index: 5;
-    background: url(../images/placeholder/lights_portrait.png) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #webcasts-page {
-    position: fixed;
-    top: 0;
-    z-index: 4;
-    background: url(../images/placeholder/banjo_guy_portrait.png) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #blog-page {
-    position: fixed;
-    top: 0;
-    z-index: 3;
-    background: url(../images/placeholder/dash_portrait.png) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #about-page {
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    background: url(../images/placeholder/sputnik_portrait.png) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #contact-page {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    background: url(../images/placeholder/steering_wheel_portrait.png) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; } }
 @media only screen and (min-device-width: 700px) and (max-width: 59.999em) {
   #show-navbar {
     display: none; }
@@ -339,186 +28,157 @@ html, body {
   .navbar {
     position: fixed;
     z-index: 999;
-    right: 1%;
-    top: 30%; }
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: url(../images/patterns/semi_transparent_black_80.png); }
+    .navbar .nav {
+      margin-top: 10px; }
     .navbar ul {
-      list-style: none; }
+      list-style: none;
+      text-align: center; }
     .navbar .nav-li {
-      margin-top: 10px;
+      font-size: 1.6em;
+      display: inline-block;
+      margin: 2px 3% 0 0;
+      padding: 1px;
       text-align: center;
-      border: 1px solid #555;
       cursor: pointer;
-      width: 20px;
-      height: 20px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      border-radius: 50%;
-      background-color: #ddd; }
+      border-bottom: 3px solid #555555; }
       .navbar .nav-li a {
         margin: 2px 1px 0 0;
-        color: transparent;
+        color: #555555;
         text-decoration: none;
         display: block; }
     .navbar .active {
-      border: 1px solid #FFEC6C;
-      background-color: #444; }
+      border-bottom: 3px solid #6ff4ff; }
       .navbar .active a {
-        color: transparent; }
-    .navbar .nav-popup {
-      -webkit-border-radius: 0.2em;
-      -moz-border-radius: 0.2em;
-      border-radius: 0.2em;
-      right: 35px;
-      display: none;
-      position: absolute;
-      background: #ddd;
-      padding: 12px;
-      font-size: 1.5em;
-      border: 1px solid #555; }
-    .navbar .nav-popup:after, .navbar .nav-popup:before {
-      left: 100%;
-      top: 50%;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none; }
-    .navbar .nav-popup:after {
-      border-color: rgba(194, 225, 245, 0);
-      border-left-color: #ddd;
-      border-width: 9px;
-      margin-top: -9px; }
-    .navbar .nav-popup:before {
-      border-color: rgba(194, 225, 245, 0);
-      border-left-color: #555;
-      border-width: 10px;
-      margin-top: -10px; }
-    .navbar #nav-pointer {
-      font-size: 2em;
-      top: 50px;
-      right: 50px; }
-    .navbar #popup-1 {
-      top: -5px; }
-    .navbar #popup-2 {
-      top: 25px; }
-    .navbar #popup-3 {
-      top: 55px; }
-    .navbar #popup-4 {
-      top: 85px; }
-    .navbar #popup-5 {
-      top: 115px; }
-    .navbar #popup-6 {
-      top: 145px; }
-    .navbar #popup-7 {
-      top: 175px; }
-    .navbar #popup-8 {
-      top: 205px; }
-    .navbar #popup-9 {
-      top: 235px; }
-    .navbar #popup-10 {
-      top: 265px; }
+        color: #aaaaaa;
+        text-shadow: #555555 1px 1px 0px; }
 
   .page {
-    width: 100%;
-    height: 150%; }
+    width: 100%; }
+
+  .section {
+    vertical-align: top;
+    display: inline-block; }
+
+  .column-1 {
+    width: 90%;
+    margin: 2% 0 0 5%; }
+
+  .column-2 {
+    width: 44%;
+    margin: 5% 0 0 5%; }
+    .column-2 .content {
+      height: 95%; }
+
+  .column-1 ~ .column-2 {
+    margin-top: -10%; }
+
+  .column-2 + .column-2 {
+    margin-left: 1.7%; }
+
+  .column-3 {
+    width: 28%;
+    margin: 5% 0 0 5%; }
+    .column-3 .content {
+      height: 95%; }
+
+  .column-1 ~ .column-3 {
+    margin-top: -300px; }
+
+  .column-3 + .column-3 {
+    margin-left: 2.5%; }
 
   .content {
     font-size: 1.5em;
     text-align: justify;
-    color: #ddd;
-    width: 20%;
-    height: 100%; }
-    .content p {
-      padding-top: 20px; }
+    color: #333333;
+    width: 100%;
+    margin: 0 auto; }
+
+  .content-spacer {
+    height: 0px;
+    width: 100%; }
 
   .content-background {
-    padding: 10px;
+    padding: 10px 5% 10px 5%;
     height: 100%;
     width: 100%;
-    opacity: 0.7;
-    background: url(../images/patterns/semi_transparent_background.png); }
+    background: url(../images/patterns/semi_transparent_80.png); }
+    .content-background p {
+      display: block;
+      margin-bottom: 10px; }
+      .content-background p:last-child {
+        margin-bottom: 0; }
 
   .divider {
-    color: #888;
-    background-color: #333;
-    padding: 5px 0 5px 0;
-    font-size: 6em;
+    color: #aaaaaa;
+    background: url(../images/patterns/semi_transparent_black_80.png);
+    font-size: 3em;
     text-align: center;
-    text-shadow: #555 1px 1px 0px; }
+    text-shadow: #555555 1px 1px 0px; }
+
+  .sub-divider {
+    color: #aaaaaa;
+    background: url(../images/patterns/semi_transparent_black_80.png);
+    font-size: 2em;
+    text-align: center;
+    text-shadow: #555555 1px 1px 0px; }
 
   #home {
-    color: #ddd;
-    background: url(../images/placeholder/sound_farm_1_1300.png) no-repeat center center fixed;
+    transition: background 1s linear;
+    height: 170%;
+    color: #aaaaaa;
+    text-shadow: #555555 1px 1px 0px;
+    background: url(../images/large/home_1300.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
     #home h1 {
       text-align: center;
-      font-size: 20em;
-      padding: 2%;
+      font-size: 15em;
+      padding: 5%;
       line-height: 0.9em;
       letter-spacing: -10px; }
 
-  #recording-page {
-    background: url(../images/placeholder/fader_1300.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #mixing-page {
-    background: url(../images/placeholder/dash_1300.png) no-repeat center center fixed;
+  #studio-page {
+    height: 205%;
+    background: url(../images/small/desk_960.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
 
   #gear-page {
-    background: url(../images/placeholder/silver_mic_1300.png) no-repeat center center fixed;
+    height: 120%;
+    background: url(../images/small/mics_960.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
 
-  #rehearsals-page {
-    background: url(../images/placeholder/concert_1300.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #rental-page {
-    background: url(../images/placeholder/lights_1300.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #webcasts-page {
-    background: url(../images/placeholder/banjo_guy_1300.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #blog-page {
-    background: url(../images/placeholder/dash_1300.png) no-repeat center center fixed;
+  #live-page {
+    height: 190%;
+    background: url(../images/small/acoustic_960.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
 
   #about-page {
-    background: url(../images/placeholder/sputnik_1300.png) no-repeat center center fixed;
+    height: 130%;
+    background: url(../images/small/drums_960.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
 
   #contact-page {
-    background: url(../images/placeholder/steering_wheel_1300.png) no-repeat center center fixed;
+    height: 150%;
+    background: url(../images/small/speakers_960.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -532,12 +192,13 @@ html, body {
     z-index: 999;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 70px;
     background: url(../images/patterns/semi_transparent_black_80.png); }
+    .navbar .nav {
+      margin-top: 10px; }
     .navbar ul {
       list-style: none;
-      text-align: center;
-      padding-bottom: 10px; }
+      text-align: center; }
     .navbar .nav-li {
       font-size: 2em;
       display: inline-block;
@@ -565,20 +226,32 @@ html, body {
     display: inline-block; }
 
   .column-1 {
-    width: 80%;
-    margin: 2% 0 0 10%; }
+    width: 60%;
+    margin: 2% 0 0 20%; }
 
   .column-2 {
-    width: 40%;
-    margin: 5% 0 0 7%; }
+    width: 29%;
+    margin: 5% 0 0 20%; }
     .column-2 .content {
-      height: 87%; }
+      height: 90%; }
+
+  .column-1 ~ .column-2 {
+    margin-top: -10%; }
+
+  .column-2 + .column-2 {
+    margin-left: 1.7%; }
 
   .column-3 {
-    width: 25%;
-    margin: 5% 0 0 6%; }
+    width: 19%;
+    margin: 5% 0 0 20%; }
     .column-3 .content {
-      height: 87%; }
+      height: 90%; }
+
+  .column-1 ~ .column-3 {
+    margin-top: -22%; }
+
+  .column-3 + .column-3 {
+    margin-left: 1.2%; }
 
   .content {
     font-size: 1.5em;
@@ -617,10 +290,11 @@ html, body {
     text-shadow: #555555 1px 1px 0px; }
 
   #home {
-    height: 175%;
+    transition: background 1s linear;
+    height: 170%;
     color: #aaaaaa;
     text-shadow: #555555 1px 1px 0px;
-    background: url(../images/home/home_1300.png) no-repeat center center fixed;
+    background: url(../images/large/home_1300.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

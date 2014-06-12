@@ -19,33 +19,16 @@ function setNavandFade() {
   });
 
   $(window).scroll(function() {
-    if ($(window).scrollTop() < pages[1]) {
+    for (var i = 0 ; i < pages.length ; i++ ) {
+      if ($(window).scrollTop() >= pages[i] && $(window).scrollTop() < pages[i+1]) {
+        console.log(i+1)
         $('.nav-li').removeClass('active');
-        $('.nav-1').addClass('active');
-        $('.page-1').css('opacity', (pages[1] - $(window).scrollTop())/600);
-    } else if ($(window).scrollTop() < pages[2] && $(window).scrollTop() >= pages[1]) {
-        $('.nav-li').removeClass('active');
-        $('.nav-2').addClass('active');
-        $('.page-2').css('opacity', (pages[2] - $(window).scrollTop())/600);
-    } else if ($(window).scrollTop() < pages[3] && $(window).scrollTop() >= pages[2]) {
-        $('.nav-li').removeClass('active');
-        $('.nav-3').addClass('active');
-        $('.page-3').css('opacity', (pages[3] - $(window).scrollTop())/600);
-    } else if ($(window).scrollTop() < pages[4] && $(window).scrollTop() >= pages[3]) {
-        $('.nav-li').removeClass('active');
-        $('.nav-4').addClass('active');
-        $('.page-4').css('opacity', (pages[4] - $(window).scrollTop())/600);
-    } else if ($(window).scrollTop() < pages[5] && $(window).scrollTop() >= pages[4]) {
-        $('.nav-li').removeClass('active');
-        $('.nav-5').addClass('active');
-        $('.page-5').css('opacity', (pages[5] - $(window).scrollTop())/600);
-    } else if ($(window).scrollTop() < pages[6] && $(window).scrollTop() >= pages[5]) {
-        $('.nav-li').removeClass('active');
-        $('.nav-6').addClass('active');
-        $('.page-6').css('opacity', (pages[6] - $(window).scrollTop())/600);
-    };
+        $('.nav-' + (i + 1)).addClass('active');
+        $('.page-' + (i + 1)).css('opacity', (pages[i+1] - $(window).scrollTop())/600);
+      };
+    }
   });
-};
+};  
 
 // this should also fire on resize
 function setColumnHeight() {
@@ -53,7 +36,6 @@ function setColumnHeight() {
   $('.page').each(function() {
     tallest = 0;
     $(this).children('.section').each(function() {
-    console.log($(this).attr('id'));
       if ($(this).innerHeight() > tallest) {
         tallest = $(this).innerHeight();
       };

@@ -12,84 +12,84 @@
 
   <script type="text/javascript">
 
-  var myScroll;
+  // var myScroll;
 
-  function loaded () {
-    window.addEventListener("load",function() {
-      // Set a timeout...
-      setTimeout(function(){
-        // Hide the address bar!
-        window.scrollTo(0, 1);
-      }, 0);
-    });
+  // function loaded () {
+  //   window.addEventListener("load",function() {
+  //     // Set a timeout...
+  //     setTimeout(function(){
+  //       // Hide the address bar!
+  //       window.scrollTo(0, 1);
+  //     }, 0);
+  //   });
 
-    if (matchMedia('only screen and (max-device-width: 700px)').matches) {
-      myScroll = new IScroll('#wrapper', {
-        mouseWheel: false,
-        momentum: false,
-        probeType: 2});
+  //   if (matchMedia('only screen and (max-device-width: 700px)').matches) {
+  //     myScroll = new IScroll('#wrapper', {
+  //       mouseWheel: false,
+  //       momentum: false,
+  //       probeType: 2});
 
-      myScroll.on('scroll', function() {
+  //     myScroll.on('scroll', function() {
 
 
-        console.log(this.y);
-        var pagePad = 800;
-        var dividerHeight = $('.divider').outerHeight();
-        var pageHeight = $('#contact-page').outerHeight() + pagePad; 
-        var totalHeight = dividerHeight + pageHeight;
+  //       console.log(this.y);
+  //       var pagePad = 800;
+  //       var dividerHeight = $('.divider').outerHeight();
+  //       var pageHeight = $('#contact-page').outerHeight() + pagePad; 
+  //       var totalHeight = dividerHeight + pageHeight;
         
-        $('#recording').css('top', this.y + pageHeight);    
-        $('#mixing').css('top', this.y + (pageHeight * 2));
-        $('#gear').css('top', this.y + (pageHeight * 3));
-        $('#rehearsals').css('top', this.y + (pageHeight * 4));
-        $('#rental').css('top', this.y + (pageHeight * 5));
-        $('#webcasts').css('top', this.y + (pageHeight * 6));
-        $('#about').css('top', this.y + (pageHeight * 7));
-        $('#contact').css('top', this.y + (pageHeight * 8));
+  //       $('#recording').css('top', this.y + pageHeight);    
+  //       $('#mixing').css('top', this.y + (pageHeight * 2));
+  //       $('#gear').css('top', this.y + (pageHeight * 3));
+  //       $('#rehearsals').css('top', this.y + (pageHeight * 4));
+  //       $('#rental').css('top', this.y + (pageHeight * 5));
+  //       $('#webcasts').css('top', this.y + (pageHeight * 6));
+  //       $('#about').css('top', this.y + (pageHeight * 7));
+  //       $('#contact').css('top', this.y + (pageHeight * 8));
 
-        $('#recording-content').css('top', this.y + pageHeight);
-        $('#mixing-content').css('top', this.y + (pageHeight * 2));
-        $('#gear-content').css('top', this.y + (pageHeight * 3));
-        $('#rehearsals-content').css('top', this.y + (pageHeight * 4));
-        $('#rental-content').css('top', this.y + (pageHeight * 5));
-        $('#webcasts-content').css('top', this.y + (pageHeight * 6));
-        $('#about-content').css('top', this.y + (pageHeight * 7));
-        $('#contact-content').css('top', this.y + (pageHeight * 8));
+  //       $('#recording-content').css('top', this.y + pageHeight);
+  //       $('#mixing-content').css('top', this.y + (pageHeight * 2));
+  //       $('#gear-content').css('top', this.y + (pageHeight * 3));
+  //       $('#rehearsals-content').css('top', this.y + (pageHeight * 4));
+  //       $('#rental-content').css('top', this.y + (pageHeight * 5));
+  //       $('#webcasts-content').css('top', this.y + (pageHeight * 6));
+  //       $('#about-content').css('top', this.y + (pageHeight * 7));
+  //       $('#contact-content').css('top', this.y + (pageHeight * 8));
 
-        if(this.y > (-1 * pageHeight) && this.y < (pagePad * -1)) {
-          $('#home').css('height', (pageHeight + this.y));
-        } else if(this.y > (-2 * pageHeight) && this.y < (-1 * pageHeight - pagePad)) {
-          $('#recording-page').css('height', this.y + (pageHeight * 2));
-          $('#home').css('height', 0);
-        } else if(this.y > (-3 * pageHeight) && this.y < (-2 * pageHeight - pagePad)) {
-          $('#mixing-page').css('height', this.y + (pageHeight * 3));
-          $('#recording-page').css('height', 0);
-        } else if(this.y > (-4 * pageHeight) && this.y < (-3 * pageHeight - pagePad)) {
-          $('#gear-page').css('height', this.y + (pageHeight * 4));
-          $('#mixing-page').css('height', 0);
-        } else if(this.y > (-5 * pageHeight) && this.y < (-4 * pageHeight - pagePad)) {
-          $('#rehearsals-page').css('height', this.y + (pageHeight * 5));
-          $('#gear-page').css('height', 0);
-        } else if(this.y > (-6 * pageHeight) && this.y < (-5 * pageHeight - pagePad)) {
-          $('#rental-page').css('height', this.y + (pageHeight * 6));
-          $('#rehearsals-page').css('height', 0);
-        } else if(this.y > (-7 * pageHeight) && this.y < (-6 * pageHeight - pagePad)) {
-          $('#webcasts-page').css('height', this.y + (pageHeight * 7));
-          $('#rental-page').css('height', 0);
-        } else if(this.y > (-8 * pageHeight + pagePad) && this.y < (-7 * pageHeight - pagePad)) {
-          $('#about-page').css('height', this.y + (pageHeight * 8));
-          $('#webcasts-page').css('height', 0);
-        } else {
-          $('#about-page').css('height', 0);
-        };
+  //       if(this.y > (-1 * pageHeight) && this.y < (pagePad * -1)) {
+  //         $('#home').css('height', (pageHeight + this.y));
+  //       } else if(this.y > (-2 * pageHeight) && this.y < (-1 * pageHeight - pagePad)) {
+  //         $('#recording-page').css('height', this.y + (pageHeight * 2));
+  //         $('#home').css('height', 0);
+  //       } else if(this.y > (-3 * pageHeight) && this.y < (-2 * pageHeight - pagePad)) {
+  //         $('#mixing-page').css('height', this.y + (pageHeight * 3));
+  //         $('#recording-page').css('height', 0);
+  //       } else if(this.y > (-4 * pageHeight) && this.y < (-3 * pageHeight - pagePad)) {
+  //         $('#gear-page').css('height', this.y + (pageHeight * 4));
+  //         $('#mixing-page').css('height', 0);
+  //       } else if(this.y > (-5 * pageHeight) && this.y < (-4 * pageHeight - pagePad)) {
+  //         $('#rehearsals-page').css('height', this.y + (pageHeight * 5));
+  //         $('#gear-page').css('height', 0);
+  //       } else if(this.y > (-6 * pageHeight) && this.y < (-5 * pageHeight - pagePad)) {
+  //         $('#rental-page').css('height', this.y + (pageHeight * 6));
+  //         $('#rehearsals-page').css('height', 0);
+  //       } else if(this.y > (-7 * pageHeight) && this.y < (-6 * pageHeight - pagePad)) {
+  //         $('#webcasts-page').css('height', this.y + (pageHeight * 7));
+  //         $('#rental-page').css('height', 0);
+  //       } else if(this.y > (-8 * pageHeight + pagePad) && this.y < (-7 * pageHeight - pagePad)) {
+  //         $('#about-page').css('height', this.y + (pageHeight * 8));
+  //         $('#webcasts-page').css('height', 0);
+  //       } else {
+  //         $('#about-page').css('height', 0);
+  //       };
         
-        // $('#position').html('position: ' + this.y);
-        // $('#height').html('height: ' + pageHeight);
-      });
-    };   
-  }
+  //       // $('#position').html('position: ' + this.y);
+  //       // $('#height').html('height: ' + pageHeight);
+  //     });
+  //   };   
+  // }
 
-  document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+  // document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 </script>
 <!-- <div class="info" id="position"></div>
 <div class="info" id="height"></div> -->
