@@ -531,7 +531,7 @@ html, body {
     height: 100%;
     color: #aaaaaa;
     text-shadow: #555555 1px 1px 0px;
-    background: url(../images/portrait/home_portrait.png) no-repeat;
+    background: url(../images/landscape/home_landscape.png) no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -727,11 +727,14 @@ html, body {
     display: none; }
 
   #home {
-    transition: background 1s linear;
     height: 170%;
     color: #aaaaaa;
     text-shadow: #555555 1px 1px 0px;
-    background: url(../images/large/home_1300.png) no-repeat center center fixed;
+    background: url(../images/large/home_1920.png) no-repeat center center fixed;
+    -webkit-transition: background 1s linear;
+    -moz-transition: background 1s linear;
+    -o-transition: background 1s linear;
+    transition: background 1s linear;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -892,11 +895,14 @@ html, body {
     display: none; }
 
   #home {
-    transition: background 1s linear;
     height: 170%;
     color: #aaaaaa;
     text-shadow: #555555 1px 1px 0px;
-    background: url(../images/large/home_1300.png) no-repeat center center fixed;
+    background: url(../images/large/home_1920.png) no-repeat center center fixed;
+    -webkit-transition: background 1s linear;
+    -moz-transition: background 1s linear;
+    -o-transition: background 1s linear;
+    transition: background 1s linear;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

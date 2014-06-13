@@ -130,11 +130,11 @@
   .mobile-img {display: none;}
 
   #home {
-    transition: background 1s linear;
     height: 170%;
     color: $lightGray;
     text-shadow: $mediumGray 1px 1px 0px;
-    background: url(../images/large/home_1300.png) no-repeat center center fixed; 
+    background: url(../images/large/home_1920.png) no-repeat center center fixed; 
+    @include transition_background;
     @include backgroundSize;
     h1 { 
       text-align: center;

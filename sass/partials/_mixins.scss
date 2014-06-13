@@ -22,3 +22,10 @@ border-radius: $radius $radius 0 0;
   -o-background-size: cover;
   background-size: cover;
 }
+
+@mixin transition_background {
+  -webkit-transition: background 1s linear;
+  -moz-transition: background 1s linear;
+  -o-transition: background 1s linear;
+  transition: background 1s linear;
+}
