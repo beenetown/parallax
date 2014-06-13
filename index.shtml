@@ -1,9 +1,5 @@
 <!--#include virtual="/partials/head.html" -->
-<body onload="loaded()">
-    <div id="wrapper">
-        <div id="scroller">
-        </div>
-    </div>
+<body>
     <!--#include virtual="/partials/navbar.html" -->
     <!--#include virtual="/partials/pages/home.html" -->  
     <!--#include virtual="/partials/pages/studio.html" -->  

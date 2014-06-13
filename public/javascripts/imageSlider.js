@@ -11,5 +11,7 @@ function timedSlider(images, time) {
 }
 
 $(document).ready(function(){
-  timedSlider(['acoustic_1920.png', 'desk_1920.png', 'drums_1920.png', 'mics_1920.png', 'speakers_1920.png', 'home_1300.png'], 7000);
+  if (!matchMedia('only screen and (max-device-width: 700px)').matches) {
+    timedSlider(['acoustic_1920.png', 'desk_1920.png', 'drums_1920.png', 'mics_1920.png', 'speakers_1920.png', 'home_1300.png'], 7000);
+  }
 });
