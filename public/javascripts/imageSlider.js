@@ -6,7 +6,7 @@ function timedSlider(images, time) {
     if(i >= images.length) {
       i = 0;
     };
-    $('#home').css('background', "url('/public/images/large/" + images[i] + "') no-repeat center center fixed");
+    $('#home').css({'background': "url('/public/images/large/" + images[i] + "') no-repeat center center fixed",  "-webkit-background-size": "cover","-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover"});
   }, time);
 }
 
