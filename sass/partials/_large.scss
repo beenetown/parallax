@@ -41,7 +41,10 @@
     }
   }
 
-  .page {width: 100%;}
+  .page {
+    width: 100%;
+    // background-position: fixed;
+  }
 
   .wrapper {
     width: 60%;

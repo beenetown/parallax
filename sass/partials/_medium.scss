@@ -41,7 +41,10 @@
     }
   }
 
-  .page {width: 100%;}
+  .page {
+    width: 100%;
+    background-position: fixed;
+  }
 
   .wrapper {
     width: 80%;
@@ -136,6 +139,7 @@
     // background: url(../images/small/desk_960.png) no-repeat center center fixed; 
     background: url(../images/patterns/semi_transparent_black_80.png);
     @include backgroundSize;
+    background-position: center center;
   }
 
   #gear-page {

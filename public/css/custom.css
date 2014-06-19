@@ -656,7 +656,8 @@ html, body {
         text-shadow: #555555 1px 1px 0px; }
 
   .page {
-    width: 100%; }
+    width: 100%;
+    background-position: fixed; }
 
   .wrapper {
     width: 80%;
@@ -757,7 +758,8 @@ html, body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center center; }
 
   #gear-page {
     height: 120%;
