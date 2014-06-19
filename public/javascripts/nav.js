@@ -20,32 +20,34 @@ function setNavandFade() {
 
   $(window).scroll(function() {
     for (var i = 0 ; i < pages.length ; i++ ) {
-      if ($(window).scrollTop() >= pages[i] && $(window).scrollTop() < pages[i+1]) {
-        console.log(i+1)
+      if ($(window).scrollTop() >= pages[i] - 10 && $(window).scrollTop() < pages[i+1]) {
         $('.nav-li').removeClass('active');
         $('.nav-' + (i + 1)).addClass('active');
-        $('.page-' + (i + 1)).css('opacity', (pages[i+1] - $(window).scrollTop())/600);
+        if (!matchMedia('only screen and (max-device-width: 700px)').matches) {
+          $('.page-' + (i + 1)).css('opacity', (pages[i+1] - $(window).scrollTop())/600);
+        };
       };
     }
   });
 };  
 
 // this should also fire on resize
-function setColumnHeight() {
-  var tallest;
-  $('.page').each(function() {
-    tallest = 0;
-    $(this).children('.section').each(function() {
-      if ($(this).innerHeight() > tallest) {
-        tallest = $(this).innerHeight();
-      };
-    })
-    $(this).children('.section').css('height', tallest + 'px');
-  });
-};
+// function setColumnHeight() {
+//   var tallest;
+//   $('.container').each(function() {
+//     tallest = 0;
+//     $(this).children('.section').each(function() {
+//       if ($(this).innerHeight() > tallest) {
+//         tallest = $(this).innerHeight();
+//       };
+//     })
+
+//     $(this).children('.section').css('height', (tallest - $('.sub-divider').height()) + 'px');
+//   });
+// };
+
 
 $(document).ready(function() {
-  setColumnHeight();
   numberPages();
   numberNavs();
   setNavandFade();
@@ -59,4 +61,18 @@ $(document).ready(function() {
   $('.nav-li').click(function() {
     $('.page').css({'opacity': '1'});
   });
+
+  if (matchMedia('only screen and (min-device-width: 700px) and (min-width: 60em').matches) {
+    $("div.lazy").lazyload({
+      data_attribute: "large",
+      threshold: 1000
+    });
+  };
+
+  if (matchMedia('only screen and (min-device-width: 700px) and (max-width: 59.999em').matches) {
+    $("div.lazy").lazyload({
+      data_attribute: "small",
+      threshold: 1000
+    });
+  };
 });

@@ -71,7 +71,7 @@
 
   .column-1, .column-2, .column-3 {
     width: 90%;
-    margin: 2% 0 0 5%;
+    margin: 2% 0 2% 5%;
   }
 
   .content {
@@ -132,7 +132,8 @@
 
   #studio-page {
     // height: 200%;
-    background: url(../images/portrait/desk_portrait.png) no-repeat; 
+    // background: url(../images/portrait/desk_portrait.png) no-repeat; 
+    background: url(../images/patterns/semi_transparent_black_80.png);
     @include backgroundSize;
   }
   #studio-mobile-img {
@@ -143,9 +144,11 @@
 
   #gear-page {
     // height: 100%;
-    background: url(../images/portrait/mics_portrait.png) no-repeat; 
+    // background: url(../images/portrait/mics_portrait.png) no-repeat; 
+    background: url(../images/patterns/semi_transparent_black_80.png);
     @include backgroundSize;
   }
+
   #gear-mobile-img {
     width: 100%;
     content: url(../images/portrait/mics_portrait.png) no-repeat; 

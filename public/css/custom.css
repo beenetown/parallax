@@ -306,7 +306,7 @@ html, body {
 
   .column-1, .column-2, .column-3 {
     width: 90%;
-    margin: 2% 0 0 5%; }
+    margin: 2% 0 2% 5%; }
 
   .content {
     font-size: 3em;
@@ -360,7 +360,7 @@ html, body {
       letter-spacing: -10px; }
 
   #studio-page {
-    background: url(../images/portrait/desk_portrait.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -375,7 +375,7 @@ html, body {
     background-size: cover; }
 
   #gear-page {
-    background: url(../images/portrait/mics_portrait.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -618,6 +618,9 @@ html, body {
     -o-background-size: cover;
     background-size: cover; } }
 @media only screen and (min-device-width: 700px) and (max-width: 59.999em) {
+  body {
+    font-size: 1vw; }
+
   #show-navbar {
     display: none; }
 
@@ -626,7 +629,7 @@ html, body {
     z-index: 999;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 70px;
     background: url(../images/patterns/semi_transparent_black_80.png); }
     .navbar .nav {
       margin-top: 10px; }
@@ -634,7 +637,7 @@ html, body {
       list-style: none;
       text-align: center; }
     .navbar .nav-li {
-      font-size: 1.6em;
+      font-size: 2em;
       display: inline-block;
       margin: 2px 3% 0 0;
       padding: 1px;
@@ -655,44 +658,47 @@ html, body {
   .page {
     width: 100%; }
 
-  .section {
-    vertical-align: top;
-    display: inline-block; }
+  .wrapper {
+    width: 80%;
+    margin: 2% 0 0 10%; }
 
-  .column-1 {
-    width: 90%;
-    margin: 2% 0 0 5%; }
+  body .wrapper:first-child {
+    margin: 0; }
 
-  .column-2 {
-    width: 44%;
-    margin: 5% 0 0 5%; }
-    .column-2 .content {
-      height: 95%; }
+  .row {
+    clear: both;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
 
-  .column-1 ~ .column-2 {
-    margin-top: -10%; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
 
-  .column-2 + .column-2 {
-    margin-left: 1.7%; }
+  .col-1, .col-2, .col-3 {
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    background: url(../images/patterns/semi_transparent_80.png); }
 
-  .column-3 {
-    width: 28%;
-    margin: 5% 0 0 5%; }
-    .column-3 .content {
-      height: 95%; }
+  .col-1 {
+    width: 100%; }
 
-  .column-1 ~ .column-3 {
-    margin-top: -300px; }
+  .col-2 {
+    width: 49.7%; }
 
-  .column-3 + .column-3 {
-    margin-left: 2.5%; }
+  .col-3 {
+    width: 32%; }
 
   .content {
     font-size: 1.5em;
-    text-align: justify;
     color: #333333;
     width: 100%;
-    margin: 0 auto; }
+    height: 100%; }
 
   .content-spacer {
     height: 0px;
@@ -701,12 +707,11 @@ html, body {
   .content-background {
     padding: 10px 5% 10px 5%;
     height: 100%;
-    width: 100%;
-    background: url(../images/patterns/semi_transparent_80.png); }
+    width: 100%; }
     .content-background p {
-      display: block;
+      height: 100%;
       margin-bottom: 10px; }
-      .content-background p:last-child {
+      .content-background p:last-of-type {
         margin-bottom: 0; }
 
   .divider {
@@ -748,7 +753,7 @@ html, body {
 
   #studio-page {
     height: 205%;
-    background: url(../images/small/desk_960.png) no-repeat center center fixed;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -756,7 +761,7 @@ html, body {
 
   #gear-page {
     height: 120%;
-    background: url(../images/small/mics_960.png) no-repeat center center fixed;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -764,7 +769,7 @@ html, body {
 
   #live-page {
     height: 190%;
-    background: url(../images/small/acoustic_960.png) no-repeat center center fixed;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -772,7 +777,7 @@ html, body {
 
   #about-page {
     height: 130%;
-    background: url(../images/small/drums_960.png) no-repeat center center fixed;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -780,12 +785,15 @@ html, body {
 
   #contact-page {
     height: 150%;
-    background: url(../images/small/speakers_960.png) no-repeat center center fixed;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; } }
 @media only screen and (min-device-width: 700px) and (min-width: 60em) {
+  body {
+    font-size: 1.1vw; }
+
   #show-navbar {
     display: none; }
 
@@ -823,44 +831,47 @@ html, body {
   .page {
     width: 100%; }
 
-  .section {
-    vertical-align: top;
-    display: inline-block; }
-
-  .column-1 {
+  .wrapper {
     width: 60%;
     margin: 2% 0 0 20%; }
 
-  .column-2 {
-    width: 29%;
-    margin: 5% 0 0 20%; }
-    .column-2 .content {
-      height: 90%; }
+  body .wrapper:first-child {
+    margin: 0; }
 
-  .column-1 ~ .column-2 {
-    margin-top: -10%; }
+  .row {
+    clear: both;
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
 
-  .column-2 + .column-2 {
-    margin-left: 1.7%; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
 
-  .column-3 {
-    width: 19%;
-    margin: 5% 0 0 20%; }
-    .column-3 .content {
-      height: 90%; }
+  .col-1, .col-2, .col-3 {
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    background: url(../images/patterns/semi_transparent_80.png); }
 
-  .column-1 ~ .column-3 {
-    margin-top: -22%; }
+  .col-1 {
+    width: 100%; }
 
-  .column-3 + .column-3 {
-    margin-left: 1.2%; }
+  .col-2 {
+    width: 49.7%; }
+
+  .col-3 {
+    width: 32%; }
 
   .content {
     font-size: 1.5em;
-    text-align: justify;
     color: #333333;
     width: 100%;
-    margin: 0 auto; }
+    height: 100%; }
 
   .content-spacer {
     height: 0px;
@@ -869,12 +880,11 @@ html, body {
   .content-background {
     padding: 10px 5% 10px 5%;
     height: 100%;
-    width: 100%;
-    background: url(../images/patterns/semi_transparent_80.png); }
+    width: 100%; }
     .content-background p {
-      display: block;
+      height: 100%;
       margin-bottom: 10px; }
-      .content-background p:last-child {
+      .content-background p:last-of-type {
         margin-bottom: 0; }
 
   .divider {
@@ -915,8 +925,8 @@ html, body {
       letter-spacing: -10px; }
 
   #studio-page {
-    height: 205%;
-    background: url(../images/large/desk_1920.png) no-repeat center center fixed;
+    height: 220%;
+    background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -924,7 +934,7 @@ html, body {
 
   #gear-page {
     height: 120%;
-    background: url(../images/large/mics_1920.png) no-repeat center center fixed;
+    background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -932,7 +942,7 @@ html, body {
 
   #live-page {
     height: 190%;
-    background: url(../images/large/acoustic_1920.png) no-repeat center center fixed;
+    background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -940,7 +950,7 @@ html, body {
 
   #about-page {
     height: 130%;
-    background: url(../images/large/drums_1920.png) no-repeat center center fixed;
+    background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -948,7 +958,7 @@ html, body {
 
   #contact-page {
     height: 150%;
-    background: url(../images/large/speakers_1920.png) no-repeat center center fixed;
+    background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
