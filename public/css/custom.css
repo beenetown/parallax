@@ -857,8 +857,7 @@ html, body {
   .col-1, .col-2, .col-3 {
     height: auto;
     float: left;
-    margin-right: 20px;
-    background: url(../images/patterns/semi_transparent_80.png); }
+    margin-right: 20px; }
 
   .col-1 {
     width: 100%; }
@@ -869,25 +868,25 @@ html, body {
   .col-3 {
     width: 32%; }
 
+  .content-background {
+    background: url(../images/patterns/semi_transparent_80.png);
+    height: 100%;
+    width: 100%; }
+
   .content {
     font-size: 1.5em;
     color: #333333;
     width: 100%;
     height: 100%; }
+    .content p {
+      height: 100%;
+      margin-bottom: 10px; }
+      .content p:last-of-type {
+        margin-bottom: 0; }
 
   .content-spacer {
     height: 0px;
     width: 100%; }
-
-  .content-background {
-    padding: 10px 5% 10px 5%;
-    height: 100%;
-    width: 100%; }
-    .content-background p {
-      height: 100%;
-      margin-bottom: 10px; }
-      .content-background p:last-of-type {
-        margin-bottom: 0; }
 
   .divider {
     color: #aaaaaa;

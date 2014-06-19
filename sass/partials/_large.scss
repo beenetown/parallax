@@ -70,12 +70,18 @@
     height: auto;
     float: left;
     margin-right: 20px;
-    background: url(../images/patterns/semi_transparent_80.png);
   }
 
   .col-1 {width: 100%;}
   .col-2 {width: 49.7%;}
   .col-3 {width: 32%;}
+
+  .content-background {
+    // padding: 10px 5% 10px 5%;
+    background: url(../images/patterns/semi_transparent_80.png);
+    height: 100%;
+    width: 100%;
+  }
 
   .content {
     font-size: 1.5em;
@@ -83,14 +89,6 @@
     color: $darkGray;
     width: 100%;
     height: 100%;
-  }
-
-  .content-spacer {height: 0px; width: 100%;}
-
-  .content-background {
-    padding: 10px 5% 10px 5%;
-    height: 100%;
-    width: 100%;
     p {
       height: 100%;
       margin-bottom: 10px;
@@ -99,6 +97,10 @@
       }
     }
   }
+
+  .content-spacer {height: 0px; width: 100%;}
+
+  
 
   .divider {
     color: $lightGray;
