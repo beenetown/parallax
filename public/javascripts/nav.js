@@ -10,19 +10,23 @@ function numberNavs() {
   });
 };
 
-// should fire on resize, too. Currently, does not.
-function setNavandFade() {
-  // this dynamically sets a page height
-  var pages = [0]
+var pages = [0]
+function setPageHeight() {
   $('.page').each(function(index) {
     pages[index+1] = $(this).outerHeight() + pages[index];
   });
+};
 
+function setActiveandFade() {
+  var threshold = 200;
   $(window).scroll(function() {
     for (var i = 0 ; i < pages.length ; i++ ) {
-      if ($(window).scrollTop() >= pages[i] - 10 && $(window).scrollTop() < pages[i+1]) {
+      if ($(window).scrollTop() >= pages[i] - threshold && $(window).scrollTop() < pages[i+1]) {
         $('.nav-li').removeClass('active');
         $('.nav-' + (i + 1)).addClass('active');
+        
+        // This ensures that fade only happens on desktop/laptop. 
+        // It looks terrible on mobile.
         if (!matchMedia('only screen and (max-device-width: 700px)').matches) {
           $('.page-' + (i + 1)).css('opacity', (pages[i+1] - $(window).scrollTop())/600);
         };
@@ -31,26 +35,28 @@ function setNavandFade() {
   });
 };  
 
-// this should also fire on resize
-// function setColumnHeight() {
-//   var tallest;
-//   $('.container').each(function() {
-//     tallest = 0;
-//     $(this).children('.section').each(function() {
-//       if ($(this).innerHeight() > tallest) {
-//         tallest = $(this).innerHeight();
-//       };
-//     })
-
-//     $(this).children('.section').css('height', (tallest - $('.sub-divider').height()) + 'px');
-//   });
-// };
-
+$(window).resize(setPageHeight);
 
 $(document).ready(function() {
+  setPageHeight();
   numberPages();
   numberNavs();
-  setNavandFade();
+  setActiveandFade();
+
+  $('.close').click(function() {
+    $(this).parent().parent().parent().hide();
+    setPageHeight();
+  });
+
+  $('#show-gear-list').click(function() {
+    $('#gear-list').toggle();
+    setPageHeight();
+  });
+
+  $('.gear-category h2').click(function() {
+    $(this).next().toggle();
+    setPageHeight();
+  });  
 
   if (!matchMedia('only screen and (max-device-width: 700px)').matches) {
     $('#show-navbar').click(function() {

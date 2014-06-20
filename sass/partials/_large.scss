@@ -43,8 +43,7 @@
 
   .page {
     width: 100%;
-    // background-position: fixed;
-      padding-bottom: 45%;
+    padding-bottom: 50%;
   }
 
   .wrapper {
@@ -109,8 +108,62 @@
     font-size: 3em;
     text-align: center;
     text-shadow: $lightGray 1px 1px 0px;
-    margin-bottom: -10px;
+    margin: 5px 0 -12px 0;
   }
+
+  #show-gear-list {
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  #gear-list {
+    display: none;
+    h1, h2 {
+      text-align: center;
+    }
+
+    h1 {font-size: 3em;}
+    h2 {
+      font-size: 2em;
+      cursor: pointer;
+    }
+  }
+
+  .gear-category {
+    margin-bottom: 5px;
+    ul {
+      // width: 40%;
+      margin: 0;
+      text-align: center;
+      font-size: 1.5em;
+      display: none;
+      list-style: none;
+      li {
+        padding: 1px 0 1px 0;
+        // border-bottom: 1px solid $darkGray;
+      }
+    }
+  }
+
+  .close {
+    margin: 5px 5px 0 0;
+    font-size: 1.1em;
+    float: right;
+    color: $darkGray;
+    // background-color: $lightGray;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    @include rounded(50%);
+    padding: 1.5px 0 0 5px;
+    line-height: 12px;
+    &:hover {
+      padding: 0.5px 0 0 4px;
+      color: white;
+      background-color: $lightRed;
+      border: 1px solid $darkRed;
+    }
+  } 
 
   .mobile-img {display: none;}
 
