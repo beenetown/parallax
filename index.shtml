@@ -3,7 +3,7 @@
     <!--#include virtual="/partials/navbar.html" -->
     <!--#include virtual="/partials/pages/home.html" -->  
     <!--#include virtual="/partials/pages/studio.html" -->  
-    <!--#include virtual="/partials/pages/gear.html" -->  
+    <!--#include virtual="/partials/pages/gear.shtml" -->  
     <!--#include virtual="/partials/pages/live.html" -->  
     <!--#include virtual="/partials/pages/about.html" -->
     <!--#include virtual="/partials/pages/contact.html" --> 

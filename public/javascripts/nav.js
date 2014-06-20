@@ -44,16 +44,19 @@ $(document).ready(function() {
   setActiveandFade();
 
   $('.close').click(function() {
+    console.log("close");
     $(this).parent().parent().parent().hide();
     setPageHeight();
   });
 
   $('#show-gear-list').click(function() {
+    console.log("show-gear-list");
     $('#gear-list').toggle();
     setPageHeight();
   });
 
   $('.gear-category h2').click(function() {
+    console.log("gear-category h2");
     $(this).next().toggle();
     setPageHeight();
   });  
