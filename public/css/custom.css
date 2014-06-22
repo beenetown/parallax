@@ -304,44 +304,64 @@ html, body {
     vertical-align: top;
     display: inline-block; }
 
-  .column-1, .column-2, .column-3 {
-    width: 90%;
-    margin: 2% 0 2% 5%; }
+  .col-1, .col-2, .col-3 {
+    width: 96%;
+    margin: 0 0 2% 2%;
+    padding: 20px;
+    background: url(../images/patterns/semi_transparent_80.png); }
 
   .content {
-    font-size: 3em;
+    font-size: 4em;
     text-align: justify;
     color: #333333;
     width: 100%;
     margin: 0 auto; }
 
-  .content-spacer {
-    height: 0px;
-    width: 100%; }
-
-  .content-background {
-    padding: 10px 5% 10px 5%;
-    width: 100%;
-    background: url(../images/patterns/semi_transparent_80.png); }
-    .content-background p {
-      display: block;
-      margin-bottom: 10px; }
-      .content-background p:last-child {
-        margin-bottom: 0; }
-
   .divider {
     color: #aaaaaa;
     background: url(../images/patterns/semi_transparent_black_80.png);
-    font-size: 3em;
+    font-size: 8em;
     text-align: center;
     text-shadow: #555555 1px 1px 0px; }
 
   .sub-divider {
-    color: #aaaaaa;
-    background: url(../images/patterns/semi_transparent_black_80.png);
-    font-size: 2em;
+    color: #333333;
+    font-size: 6em;
     text-align: center;
-    text-shadow: #555555 1px 1px 0px; }
+    text-shadow: #aaaaaa 1px 1px 0px;
+    margin: 5px 0 -12px 0; }
+
+  #show-gear-list {
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center; }
+
+  #gear-list {
+    display: none; }
+    #gear-list h1, #gear-list h2 {
+      text-align: center; }
+    #gear-list h1 {
+      font-size: 8em; }
+    #gear-list h2 {
+      font-size: 6em;
+      cursor: pointer; }
+
+  .gear-category {
+    margin-bottom: 5px; }
+    .gear-category ul {
+      margin: 0;
+      text-align: center;
+      font-size: 4em;
+      display: none;
+      list-style: none; }
+      .gear-category ul li {
+        padding: 1px 0 1px 0; }
+
+  .close {
+    margin: 0px 5px 0 0;
+    font-size: 3em;
+    float: right;
+    color: #333333; }
 
   #home {
     height: 100%;
@@ -390,7 +410,7 @@ html, body {
     background-size: cover; }
 
   #live-page {
-    background: url(../images/portrait/acoustic_portrait.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -405,7 +425,7 @@ html, body {
     background-size: cover; }
 
   #about-page {
-    background: url(../images/portrait/drums_portrait.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -420,7 +440,7 @@ html, body {
     background-size: cover; }
 
   #contact-page {
-    background: url(../images/portrait/speakers_portrait.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -455,7 +475,7 @@ html, body {
     z-index: 999;
     bottom: 0;
     width: 100%;
-    height: 80px;
+    height: 100px;
     background: url(../images/patterns/semi_transparent_black_80.png); }
     .navbar .nav {
       margin-top: 10px; }
@@ -463,7 +483,7 @@ html, body {
       list-style: none;
       text-align: center; }
     .navbar .nav-li {
-      font-size: 3em;
+      font-size: 3.5em;
       display: inline-block;
       margin: 2px 3% 0 0;
       padding: 1px;
@@ -488,9 +508,11 @@ html, body {
     vertical-align: top;
     display: inline-block; }
 
-  .column-1, .column-2, .column-3 {
-    width: 90%;
-    margin: 2% 0 0 5%; }
+  .col-1, .col-2, .col-3 {
+    width: 96%;
+    margin: 0 0 2% 2%;
+    padding: 20px;
+    background: url(../images/patterns/semi_transparent_80.png); }
 
   .content {
     font-size: 3em;
@@ -499,33 +521,51 @@ html, body {
     width: 100%;
     margin: 0 auto; }
 
-  .content-spacer {
-    height: 0px;
-    width: 100%; }
-
-  .content-background {
-    padding: 10px 5% 10px 5%;
-    width: 100%;
-    background: url(../images/patterns/semi_transparent_80.png); }
-    .content-background p {
-      display: block;
-      margin-bottom: 10px; }
-      .content-background p:last-child {
-        margin-bottom: 0; }
-
   .divider {
     color: #aaaaaa;
     background: url(../images/patterns/semi_transparent_black_80.png);
-    font-size: 3em;
+    font-size: 7em;
     text-align: center;
     text-shadow: #555555 1px 1px 0px; }
 
   .sub-divider {
-    color: #aaaaaa;
-    background: url(../images/patterns/semi_transparent_black_80.png);
-    font-size: 2em;
+    color: #333333;
+    font-size: 5em;
     text-align: center;
-    text-shadow: #555555 1px 1px 0px; }
+    text-shadow: #aaaaaa 1px 1px 0px;
+    margin: 5px 0 -12px 0; }
+
+  #show-gear-list {
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center; }
+
+  #gear-list {
+    display: none; }
+    #gear-list h1, #gear-list h2 {
+      text-align: center; }
+    #gear-list h1 {
+      font-size: 7em; }
+    #gear-list h2 {
+      font-size: 5em;
+      cursor: pointer; }
+
+  .gear-category {
+    margin-bottom: 5px; }
+    .gear-category ul {
+      margin: 0;
+      text-align: center;
+      font-size: 3em;
+      display: none;
+      list-style: none; }
+      .gear-category ul li {
+        padding: 1px 0 1px 0; }
+
+  .close {
+    margin: 0px 5px 0 0;
+    font-size: 2em;
+    float: right;
+    color: #333333; }
 
   #home {
     height: 100%;
@@ -544,7 +584,7 @@ html, body {
       letter-spacing: -10px; }
 
   #studio-page {
-    background: url(../images/landscape/desk_landscape.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -559,7 +599,7 @@ html, body {
     background-size: cover; }
 
   #gear-page {
-    background: url(../images/landscape/mics_landscape.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -574,7 +614,7 @@ html, body {
     background-size: cover; }
 
   #live-page {
-    background: url(../images/landscape/acoustic_landscape.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -589,7 +629,7 @@ html, body {
     background-size: cover; }
 
   #about-page {
-    background: url(../images/landscape/drums_landscape.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -604,7 +644,7 @@ html, body {
     background-size: cover; }
 
   #contact-page {
-    background: url(../images/landscape/speakers_landscape.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -629,7 +669,7 @@ html, body {
     z-index: 999;
     bottom: 0;
     width: 100%;
-    height: 70px;
+    height: 60px;
     background: url(../images/patterns/semi_transparent_black_80.png); }
     .navbar .nav {
       margin-top: 10px; }
@@ -637,7 +677,7 @@ html, body {
       list-style: none;
       text-align: center; }
     .navbar .nav-li {
-      font-size: 2em;
+      font-size: 1.5em;
       display: inline-block;
       margin: 2px 3% 0 0;
       padding: 1px;
@@ -719,8 +759,45 @@ html, body {
     font-size: 3em;
     text-align: center;
     text-shadow: #aaaaaa 1px 1px 0px;
-    margin-top: 5px;
-    margin-bottom: -10px; }
+    margin: 5px 0 -12px 0; }
+
+  #show-gear-list {
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center; }
+
+  #gear-list {
+    display: none; }
+    #gear-list h1, #gear-list h2 {
+      text-align: center; }
+    #gear-list h1 {
+      font-size: 3em; }
+    #gear-list h2 {
+      font-size: 2em;
+      cursor: pointer; }
+
+  .gear-category {
+    margin-bottom: 5px; }
+    .gear-category ul {
+      margin: 0;
+      text-align: center;
+      font-size: 1.5em;
+      display: none;
+      list-style: none; }
+      .gear-category ul li {
+        padding: 1px 0 1px 0; }
+
+  .close {
+    position: absolute;
+    right: 5px;
+    font-size: 1em;
+    float: right;
+    color: #333333;
+    cursor: pointer; }
+    .close:hover {
+      color: #914141;
+      font-size: 1.3em;
+      text-shadow: #660000 1px 1px 0px; }
 
   .mobile-img {
     display: none; }
@@ -886,7 +963,8 @@ html, body {
 
   #show-gear-list {
     cursor: pointer;
-    margin-top: 15px; }
+    margin-top: 15px;
+    text-align: center; }
 
   #gear-list {
     display: none; }
@@ -910,23 +988,16 @@ html, body {
         padding: 1px 0 1px 0; }
 
   .close {
-    margin: 5px 5px 0 0;
-    font-size: 1.1em;
+    position: absolute;
+    right: 5px;
+    font-size: 1em;
     float: right;
     color: #333333;
-    cursor: pointer;
-    height: 18px;
-    width: 18px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    padding: 1.5px 0 0 5px;
-    line-height: 12px; }
+    cursor: pointer; }
     .close:hover {
-      padding: 0.5px 0 0 4px;
-      color: white;
-      background-color: #914141;
-      border: 1px solid #660000; }
+      color: #914141;
+      font-size: 1.3em;
+      text-shadow: #660000 1px 1px 0px; }
 
   .mobile-img {
     display: none; }

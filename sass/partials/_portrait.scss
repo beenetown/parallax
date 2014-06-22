@@ -69,51 +69,78 @@
     display: inline-block;
   }
 
-  .column-1, .column-2, .column-3 {
-    width: 90%;
-    margin: 2% 0 2% 5%;
+  .col-1, .col-2, .col-3 {
+    width: 96%;
+    margin: 0 0 2% 2%;
+    padding: 20px;
+    background: url(../images/patterns/semi_transparent_80.png);
   }
 
   .content {
     // height: 50%;
-    font-size: 3em;
+    font-size: 4em;
     text-align: justify;
     color: $darkGray;
     width: 100%;
     margin: 0 auto;
   }
 
-  .content-spacer {height: 0px; width: 100%;}
-
-  .content-background {
-    padding: 10px 5% 10px 5%;
-    // height: 100%;
-    width: 100%;
-    background: url(../images/patterns/semi_transparent_80.png);
-    p {
-      display: block;
-      margin-bottom: 10px;
-      &:last-child {
-        margin-bottom: 0; 
-      }
-    }
-  }
-
   .divider {
     color: $lightGray;
     background: url(../images/patterns/semi_transparent_black_80.png);
-    font-size: 3em;
+    font-size: 8em;
     text-align: center;
     text-shadow: $mediumGray 1px 1px 0px;
   }
 
   .sub-divider {
-    color: $lightGray;
-    background: url(../images/patterns/semi_transparent_black_80.png);
-    font-size: 2em;
+    color: $darkGray;
+    font-size: 6em;
     text-align: center;
-    text-shadow: $mediumGray 1px 1px 0px;
+    text-shadow: $lightGray 1px 1px 0px;
+    margin: 5px 0 -12px 0;
   }
+
+  #show-gear-list {
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  #gear-list {
+    display: none;
+    h1, h2 {
+      text-align: center;
+    }
+
+    h1 {font-size: 8em;}
+    h2 {
+      font-size: 6em;
+      cursor: pointer;
+    }
+  }
+
+  .gear-category {
+    margin-bottom: 5px;
+    ul {
+      // width: 40%;
+      margin: 0;
+      text-align: center;
+      font-size: 4em;
+      display: none;
+      list-style: none;
+      li {
+        padding: 1px 0 1px 0;
+      }
+    }
+  }
+
+  .close {
+    margin: 0px 5px 0 0;
+    font-size: 3em;
+    float: right;
+    color: $darkGray;
+  } 
 
   #home {
     height: 100%;
@@ -157,19 +184,21 @@
 
   #live-page {
     // height: 190%;
-    background: url(../images/portrait/acoustic_portrait.png) no-repeat; 
+    // background: url(../images/portrait/acoustic_portrait.png) no-repeat; 
+    background: url(../images/patterns/semi_transparent_black_80.png);
     @include backgroundSize;
   }
 
   #live-mobile-img {
     width: 100%;
-   content: url(../images/portrait/acoustic_portrait.png) no-repeat; 
+    content: url(../images/portrait/acoustic_portrait.png) no-repeat; 
     @include backgroundSize; 
   }
 
   #about-page {
     // height: 100%;
-    background: url(../images/portrait/drums_portrait.png) no-repeat; 
+    // background: url(../images/portrait/drums_portrait.png) no-repeat; 
+    background: url(../images/patterns/semi_transparent_black_80.png);
     @include backgroundSize;
   }
 
@@ -181,9 +210,11 @@
 
   #contact-page {
     // height: 100%;
-    background: url(../images/portrait/speakers_portrait.png) no-repeat; 
+    // background: url(../images/portrait/speakers_portrait.png) no-repeat; 
+    background: url(../images/patterns/semi_transparent_black_80.png);
     @include backgroundSize;
   }
+
 
   #contact-mobile-img {
     width: 100%;

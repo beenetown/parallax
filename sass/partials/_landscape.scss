@@ -24,7 +24,7 @@
     z-index: 999;
     bottom: 0;
     width: 100%;
-    height: 80px;
+    height: 100px;
     background: url(../images/patterns/semi_transparent_black_80.png);
     .nav{
       margin-top: 10px;
@@ -35,7 +35,7 @@
     }
 
     .nav-li {
-      font-size: 3em;
+      font-size: 3.5em;
       display: inline-block;
       margin: 2px 3% 0 0;
       padding: 1px;
@@ -69,9 +69,11 @@
     display: inline-block;
   }
 
-  .column-1, .column-2, .column-3 {
-    width: 90%;
-    margin: 2% 0 0 5%;
+  .col-1, .col-2, .col-3 {
+    width: 96%;
+    margin: 0 0 2% 2%;
+    padding: 20px;
+    background: url(../images/patterns/semi_transparent_80.png);
   }
 
   .content {
@@ -83,37 +85,62 @@
     margin: 0 auto;
   }
 
-  .content-spacer {height: 0px; width: 100%;}
-
-  .content-background {
-    padding: 10px 5% 10px 5%;
-    // height: 100%;
-    width: 100%;
-    background: url(../images/patterns/semi_transparent_80.png);
-    p {
-      display: block;
-      margin-bottom: 10px;
-      &:last-child {
-        margin-bottom: 0; 
-      }
-    }
-  }
-
   .divider {
     color: $lightGray;
     background: url(../images/patterns/semi_transparent_black_80.png);
-    font-size: 3em;
+    font-size: 7em;
     text-align: center;
     text-shadow: $mediumGray 1px 1px 0px;
   }
 
   .sub-divider {
-    color: $lightGray;
-    background: url(../images/patterns/semi_transparent_black_80.png);
-    font-size: 2em;
+    color: $darkGray;
+    font-size: 5em;
     text-align: center;
-    text-shadow: $mediumGray 1px 1px 0px;
+    text-shadow: $lightGray 1px 1px 0px;
+    margin: 5px 0 -12px 0;
   }
+
+  #show-gear-list {
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  #gear-list {
+    display: none;
+    h1, h2 {
+      text-align: center;
+    }
+
+    h1 {font-size: 7em;}
+    h2 {
+      font-size: 5em;
+      cursor: pointer;
+    }
+  }
+
+  .gear-category {
+    margin-bottom: 5px;
+    ul {
+      // width: 40%;
+      margin: 0;
+      text-align: center;
+      font-size: 3em;
+      display: none;
+      list-style: none;
+      li {
+        padding: 1px 0 1px 0;
+      }
+    }
+  }
+
+  .close {
+    margin: 0px 5px 0 0;
+    font-size: 2em;
+    float: right;
+    color: $darkGray;
+  } 
 
   #home {
     height: 100%;
@@ -132,7 +159,8 @@
 
   #studio-page {
     // height: 200%;
-    background: url(../images/landscape/desk_landscape.png) no-repeat; 
+    // background: url(../images/landscape/desk_landscape.png) no-repeat; 
+    background: url(../images/patterns/semi_transparent_black_80.png);
     @include backgroundSize;
   }
   #studio-mobile-img {
@@ -143,9 +171,11 @@
 
   #gear-page {
     // height: 100%;
-    background: url(../images/landscape/mics_landscape.png) no-repeat; 
+    // background: url(../images/landscape/mics_landscape.png) no-repeat; 
+    background: url(../images/patterns/semi_transparent_black_80.png);
     @include backgroundSize;
   }
+
   #gear-mobile-img {
     width: 100%;
     content: url(../images/landscape/mics_landscape.png) no-repeat; 
@@ -154,19 +184,21 @@
 
   #live-page {
     // height: 190%;
-    background: url(../images/landscape/acoustic_landscape.png) no-repeat; 
+    // background: url(../images/landscape/acoustic_landscape.png) no-repeat; 
+    background: url(../images/patterns/semi_transparent_black_80.png);
     @include backgroundSize;
   }
 
   #live-mobile-img {
     width: 100%;
-   content: url(../images/landscape/acoustic_landscape.png) no-repeat; 
+    content: url(../images/landscape/acoustic_landscape.png) no-repeat; 
     @include backgroundSize; 
   }
 
   #about-page {
     // height: 100%;
-    background: url(../images/landscape/drums_landscape.png) no-repeat; 
+    // background: url(../images/landscape/drums_landscape.png) no-repeat; 
+    background: url(../images/patterns/semi_transparent_black_80.png);
     @include backgroundSize;
   }
 
@@ -178,9 +210,11 @@
 
   #contact-page {
     // height: 100%;
-    background: url(../images/landscape/speakers_landscape.png) no-repeat; 
+    // background: url(../images/landscape/speakers_landscape.png) no-repeat; 
+    background: url(../images/patterns/semi_transparent_black_80.png);
     @include backgroundSize;
   }
+
 
   #contact-mobile-img {
     width: 100%;

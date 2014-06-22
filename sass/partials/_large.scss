@@ -104,7 +104,6 @@
 
   .sub-divider {
     color: $darkGray;
-    // background-color: #111;
     font-size: 3em;
     text-align: center;
     text-shadow: $lightGray 1px 1px 0px;
@@ -114,6 +113,7 @@
   #show-gear-list {
     cursor: pointer;
     margin-top: 15px;
+    text-align: center;
   }
 
   #gear-list {
@@ -140,28 +140,21 @@
       list-style: none;
       li {
         padding: 1px 0 1px 0;
-        // border-bottom: 1px solid $darkGray;
       }
     }
   }
 
   .close {
-    margin: 5px 5px 0 0;
-    font-size: 1.1em;
+    position: absolute;
+    right: 5px;
+    font-size: 1em;
     float: right;
     color: $darkGray;
-    // background-color: $lightGray;
     cursor: pointer;
-    height: 18px;
-    width: 18px;
-    @include rounded(50%);
-    padding: 1.5px 0 0 5px;
-    line-height: 12px;
     &:hover {
-      padding: 0.5px 0 0 4px;
-      color: white;
-      background-color: $lightRed;
-      border: 1px solid $darkRed;
+      color: $lightRed;
+      font-size: 1.3em;
+      text-shadow: $darkRed 1px 1px 0px;
     }
   } 
 

@@ -6,7 +6,7 @@
     z-index: 999;
     bottom: 0;
     width: 100%;
-    height: 70px;
+    height: 60px;
     background: url(../images/patterns/semi_transparent_black_80.png);
     .nav{
       margin-top: 10px;
@@ -17,7 +17,7 @@
     }
 
     .nav-li {
-      font-size: 2em;
+      font-size: 1.5em;
       display: inline-block;
       margin: 2px 3% 0 0;
       padding: 1px;
@@ -102,13 +102,59 @@
 
   .sub-divider {
     color: $darkGray;
-    // background-color: #111;
     font-size: 3em;
     text-align: center;
     text-shadow: $lightGray 1px 1px 0px;
-    margin-top: 5px;
-    margin-bottom: -10px;
+    margin: 5px 0 -12px 0;
   }
+
+  #show-gear-list {
+    cursor: pointer;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  #gear-list {
+    display: none;
+    h1, h2 {
+      text-align: center;
+    }
+
+    h1 {font-size: 3em;}
+    h2 {
+      font-size: 2em;
+      cursor: pointer;
+    }
+  }
+
+  .gear-category {
+    margin-bottom: 5px;
+    ul {
+      // width: 40%;
+      margin: 0;
+      text-align: center;
+      font-size: 1.5em;
+      display: none;
+      list-style: none;
+      li {
+        padding: 1px 0 1px 0;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    right: 5px;
+    font-size: 1em;
+    float: right;
+    color: $darkGray;
+    cursor: pointer;
+    &:hover {
+      color: $lightRed;
+      font-size: 1.3em;
+      text-shadow: $darkRed 1px 1px 0px;
+    }
+  } 
 
   .mobile-img {display: none;}
   
