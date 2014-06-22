@@ -19,7 +19,7 @@ function setPageHeight() {
 
 function setActiveandFade() {
   var threshold = 200;
-  $(window).scroll(function() {
+  $(window).on("resize scroll load", function() {
     for (var i = 0 ; i < pages.length ; i++ ) {
       if ($(window).scrollTop() >= pages[i] - threshold && $(window).scrollTop() < pages[i+1]) {
         $('.nav-li').removeClass('active');
@@ -36,7 +36,7 @@ function setActiveandFade() {
 };  
 
 $(window).resize(setPageHeight);
-$(window).on("orientationchane", setPageHeight);
+$(window).on("orientationchange", setPageHeight);
 
 $(document).ready(function() {
   setPageHeight();
