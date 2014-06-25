@@ -4,7 +4,7 @@ function timedSlider(images, time) {
   var i = 0;
   setInterval(function () {
     i++;
-    if (i >= images.length) {
+    if (i >= images.length - 1) {
       i = 0;
       firstTimeThrough = false;
     }
