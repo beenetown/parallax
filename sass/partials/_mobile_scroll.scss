@@ -1,0 +1,336 @@
+//phones
+// @media only screen and (min-width: 100px) and (max-device-width: 700px) {
+//   html {
+//     -ms-touch-action: none;
+//   }
+
+//   body {
+//     overflow: hidden; /* this is important to prevent the whole page to bounce */
+//   }
+
+//   #wrapper {
+//     position: absolute;
+//     z-index: 5000;
+//     width: 100%;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     overflow: hidden;
+//   }
+
+//   #scroller{
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     z-index: 10000;
+//     width: 100%;
+//     height: 15000px;
+//     overflow: hidden;
+
+//     -webkit-tap-highlight-color: rgba(0,0,0,0);
+//     -webkit-transform: translateZ(0);
+//     -moz-transform: translateZ(0);
+//     -ms-transform: translateZ(0);
+//     -o-transform: translateZ(0);
+//     transform: translateZ(0);
+//     -webkit-touch-callout: none;
+//     -webkit-user-select: none;
+//     -moz-user-select: none;
+//     -ms-user-select: none;
+//     user-select: none;
+//     -webkit-text-size-adjust: none;
+//     -moz-text-size-adjust: none;
+//     -ms-text-size-adjust: none;
+//     -o-text-size-adjust: none;
+//     text-size-adjust: none;
+//   }
+
+//   .page {
+//     position: fixed;
+//     width: 100%;
+//     height: 100%;
+//     overflow: hidden;
+//     top: 0;
+//     div {
+//       position: absolute;
+//       width: 100%;
+//       overflow: hidden;
+//       -webkit-transform: translateZ(0);
+//       -moz-transform: translateZ(0);
+//       -ms-transform: translateZ(0);
+//       -o-transform: translateZ(0);
+//       transform: translateZ(0);
+//     }
+//   }
+
+
+//   #show-navbar {
+//     z-index: 10002;
+//     position: fixed;
+//     background-color: #FFEC6C;
+//     padding: 2px;
+//     top: 10px;
+//     right: 10px;
+//     width:10%;
+//     display: inline;
+//     img {
+//       width: 100%;
+//     }
+//   }
+//   .navbar {
+//     background-color: #FFEC6C;
+//     display: none;
+//     position: fixed;
+//     z-index: 10001;
+//     right: 0;
+//     top: 0;
+//     height: 100%;
+//     width: 60%;
+//     .nav {
+//       height: 60%;
+//       width: 90%;
+//       margin: 0 auto;
+//       margin-top: 30%;
+
+//       ul {
+//         list-style: none;
+//       }
+//     }
+
+//     .nav-li {
+//       width: 100%;
+//       // text-align: center;
+//       border: 1px solid #555;
+//       cursor: pointer;
+//       margin-top: 10px;
+//       height: 60px;
+//       // @include rounded(50%);
+//       background-color: #ddd;
+//       a {
+//         height: 100%;
+//         // margin: 2px 1px 0 0;
+//         color: transparent;
+//         text-decoration: none;
+//         display: block;
+//         cursor: pointer;
+//       }
+//     }
+
+//     .active {
+//       border: 1px solid #FFEC6C;
+//         background-color: #444; 
+//       a {
+//         color: transparent;
+//       }
+//     }
+
+    
+//     .nav-popup {
+//       z-index: 1001;
+//       position: fixed;
+//       margin-top: 10px;
+//       font-size: 4em;
+//       left: 455px;
+//       cursor: pointer;
+//       // top: 10px;
+//       // display: block;    
+//     }
+//     #nav-pointer {top: 90px;}
+//     #popup-1 {top: 165px;cursor: pointer;}
+//     #popup-2 {top: 235px;cursor: pointer;}
+//     #popup-3 {top: 305px;cursor: pointer;}
+//     #popup-4 {top: 375px;cursor: pointer;}
+//     #popup-5 {top: 445px;cursor: pointer;}
+//     #popup-6 {top: 515px;cursor: pointer;}
+//     #popup-7 {top: 585px;cursor: pointer;}
+//     #popup-8 {top: 655px;cursor: pointer;}
+//     #popup-9 {top: 725px;cursor: pointer;}
+//     #popup-10 {top: 795px;cursor: pointer;}
+//   }
+
+//   .content {
+//     position: fixed;
+//     padding-top: 100px;
+//     width: 150px;
+//     height: 100%;
+//     z-index: 100;
+//     // top: 1800px;
+//     font-size: 4em;
+//     // text-align: justify;
+//     color: #444;
+//     // width: 50px;
+//     // margin: 0 auto;
+//     // padding-top: 10%;
+//     // margin-left: 10%;
+//     // height: 150%;
+//     // overflow: scroll;
+//     p {
+//       padding-top: 20px;
+//     }
+//   }
+
+//   .content-spacer {display: none;}
+
+//   .content-background {
+//     // @include rounded;
+//     padding: 10px;
+//     // height: 100%;
+//     // width: 100%;
+//     // opacity: 0.7;
+//     background: url(../images/patterns/semi_transparent_80.png);
+//     // background-color: white;
+//   }
+
+//   .divider {
+//     // display: none;
+//     position: fixed;
+//     width: 100%;
+//     color: #888;
+//     background-color: #333;
+//     padding: 5px 0 5px 0;
+//     font-size: 7em;
+//     text-align: center;
+//     text-shadow: #555 1px 1px 0px;
+//   }
+
+//   #recording {
+//     z-index: 11; 
+//     top: 1800px;
+//   }
+
+//   #mixing {
+//     z-index: 10; 
+//     top: 1800px;
+//   }
+
+//   #gear {
+//     z-index: 9; 
+//     top: 1800px;
+//   }
+
+//   #rehearsals {
+//     z-index: 8; 
+//     top: 1800px;
+//   }
+
+//   #rental {
+//     z-index: 7; 
+//     top: 1800px;
+//   }
+
+//   #webcasts {
+//     z-index: 6; 
+//     top: 1800px;
+//   }
+
+//   #blog {
+//     z-index: 5; 
+//     top: 1800px;
+//   }
+
+//   #about {
+//     z-index: 4; 
+//     top: 1800px;
+//   }
+
+//   #contact {
+//     z-index: 3; 
+//     top: 1800px;
+//   }
+
+
+
+//   #home {
+//     position: fixed;
+//     z-index: 10;
+//     // max-width: 100%;
+//     // height: 100px;
+//     // height: 400px;
+//     color: #ddd;
+//     // overflow: hidden;
+//     background: url(../images/home/home_portrait.png) no-repeat; 
+//     @include backgroundSize;
+//     h1 { 
+//       text-align: center;
+//       font-size: 20em;
+//       padding: 2%;
+//       line-height: 0.9em;
+//       letter-spacing: -10px;
+//     }
+//   }
+
+//   #recording-page {
+//     position: fixed;
+//     top: 0;
+//     z-index: 9;
+//     // overflow: hidden;
+//     background: url(../images/placeholder/fader_portrait.png) no-repeat; 
+//     @include backgroundSize;
+
+//   }
+
+//   #mixing-page {
+//     position: fixed;
+//     top: 0;
+//     z-index: 8;
+//     background: url(../images/placeholder/dash_portrait.png) no-repeat; 
+//     @include backgroundSize;
+//   }
+
+//   #gear-page {
+//     position: fixed;
+//     top: 0;
+//     z-index: 7; 
+//     background: url(../images/placeholder/silver_mic_portrait.png) no-repeat; 
+//     @include backgroundSize;
+//   }
+
+//   #rehearsals-page {
+//     position: fixed;
+//     top: 0;
+//     z-index: 6;
+//     background: url(../images/placeholder/concert_portrait.png) no-repeat; 
+//     @include backgroundSize;
+//   }
+
+//   #rental-page {
+//     position: fixed;
+//     top: 0;
+//     z-index: 5;
+//     background: url(../images/placeholder/lights_portrait.png) no-repeat; 
+//     @include backgroundSize;
+//   }
+
+//   #webcasts-page {
+//     position: fixed;
+//     top: 0;
+//     z-index: 4;
+//     background: url(../images/placeholder/banjo_guy_portrait.png) no-repeat; 
+//     @include backgroundSize;
+//   }
+
+//   #blog-page {
+//     position: fixed;
+//     top: 0;
+//     z-index: 3;
+//     background: url(../images/placeholder/dash_portrait.png) no-repeat; 
+//     @include backgroundSize;  
+//   }
+
+//   #about-page {
+//     position: fixed;
+//     top: 0;
+//     z-index: 2;
+//     background: url(../images/placeholder/sputnik_portrait.png) no-repeat; 
+//     @include backgroundSize;
+//   }
+
+//   #contact-page {
+//     position: fixed;
+//     top: 0;
+//     z-index: 1;
+//     background: url(../images/placeholder/steering_wheel_portrait.png) no-repeat; 
+//     @include backgroundSize;  
+//   }
+// }

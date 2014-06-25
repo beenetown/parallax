@@ -17,19 +17,27 @@ function setPageHeight() {
   });
 };
 
+function setActive(i) {
+  $('.nav-li').removeClass('active');
+  $('.nav-' + (i + 1)).addClass('active');
+};
+
+function fade(i) {
+  // This only happens on desktop/laptop. 
+  // It looks terrible on mobile.
+  var fadeThreshold = $(window).height() * 0.7;
+  if (!matchMedia('only screen and (max-device-width: 700px)').matches) {
+    $('.page-' + (i + 1)).css('opacity', (pages[i+1] - $(window).scrollTop())/fadeThreshold);
+  };
+};
+
 function setActiveandFade() {
-  var threshold = 200;
+  var activeThreshold = 200;
   $(window).on("resize scroll load", function() {
     for (var i = 0 ; i < pages.length ; i++ ) {
-      if ($(window).scrollTop() >= pages[i] - threshold && $(window).scrollTop() < pages[i+1]) {
-        $('.nav-li').removeClass('active');
-        $('.nav-' + (i + 1)).addClass('active');
-        
-        // This ensures that fade only happens on desktop/laptop. 
-        // It looks terrible on mobile.
-        if (!matchMedia('only screen and (max-device-width: 700px)').matches) {
-          $('.page-' + (i + 1)).css('opacity', (pages[i+1] - $(window).scrollTop())/600);
-        };
+      if ($(window).scrollTop() >= pages[i] - activeThreshold && $(window).scrollTop() < pages[i+1]) {
+        setActive(i);
+        fade(i);
       };
     }
   });
