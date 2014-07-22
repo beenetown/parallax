@@ -31,6 +31,13 @@ function fade(i) {
   }
 }
 
+function popup() {
+  $('.nav-li').hover(function() {
+    id = $(this).attr('id');
+    $('#popup-' + id).toggle();
+  });
+}
+
 function setActiveandFade() {
   var activeThreshold = 200;
   var i;
@@ -52,6 +59,7 @@ $(document).ready(function () {
   numberPages();
   numberNavs();
   setActiveandFade();
+  popup();
 
   $('.close').click(function () {
     $(this).parent().parent().parent().hide();

@@ -227,7 +227,7 @@ button {
   -ms-interpolation-mode: bicubic; }
 
 .hidden {
-  visibility: hidden; }
+  display: none; }
 
 *, *:before, *:after {
   -moz-box-sizing: border-box;
@@ -298,157 +298,84 @@ html, body {
         text-shadow: #555555 1px 1px 0px; }
 
   .page {
-    width: 100%; }
-
-  .section {
-    vertical-align: top;
-    display: inline-block; }
-
-  .col-1, .col-2, .col-3 {
-    width: 96%;
-    margin: 0 0 2% 2%;
-    padding: 20px;
-    background: url(../images/patterns/semi_transparent_80.png); }
+    width: 100%;
+    padding-bottom: 45%; }
 
   .content {
-    font-size: 4em;
-    text-align: justify;
-    color: #333333;
+    background: url(../images/patterns/semi_transparent_80.png);
+    font-size: 1.5em;
+    color: #111111;
     width: 100%;
-    margin: 0 auto; }
+    height: 50%;
+    padding: 10px 20% 10px 20%; }
+    .content p {
+      margin-bottom: 10px; }
 
-  .divider {
+  .divider h1 {
+    text-align: center;
     color: #aaaaaa;
     background: url(../images/patterns/semi_transparent_black_80.png);
-    font-size: 8em;
-    text-align: center;
+    font-size: 4em;
     text-shadow: #555555 1px 1px 0px; }
 
-  .sub-divider {
-    color: #333333;
-    font-size: 6em;
-    text-align: center;
-    text-shadow: #aaaaaa 1px 1px 0px;
-    margin: 5px 0 -12px 0; }
-
-  #show-gear-list {
-    cursor: pointer;
-    margin-top: 15px;
-    text-align: center; }
-
-  #gear-list {
-    display: none; }
-    #gear-list h1, #gear-list h2 {
-      text-align: center; }
-    #gear-list h1 {
-      font-size: 8em; }
-    #gear-list h2 {
-      font-size: 6em;
-      cursor: pointer; }
-
-  .gear-category {
-    margin-bottom: 5px; }
-    .gear-category ul {
-      margin: 0;
-      text-align: center;
-      font-size: 4em;
-      display: none;
-      list-style: none; }
-      .gear-category ul li {
-        padding: 1px 0 1px 0; }
-
   .close {
-    margin: 0px 5px 0 0;
-    font-size: 3em;
+    position: absolute;
+    right: 5px;
+    font-size: 1em;
     float: right;
-    color: #333333; }
+    color: #111111;
+    cursor: pointer; }
+    .close:hover {
+      color: #914141;
+      font-size: 1.3em;
+      text-shadow: #660000 1px 1px 0px; }
+
+  .mobile-img {
+    display: none; }
 
   #home {
-    height: 100%;
-    color: #aaaaaa;
-    text-shadow: #555555 1px 1px 0px;
-    background: url(../images/portrait/home_portrait.png) no-repeat;
+    background-image: url(../images/portrait/secret_garden_646.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
     #home h1 {
+      background: url(../images/patterns/semi_transparent_black_80.png);
+      text-shadow: #555555 1px 1px 0px;
+      color: white;
+      opacity: 0.8;
       text-align: center;
-      font-size: 20em;
+      font-size: 15em;
       padding: 5%;
       line-height: 0.9em;
-      letter-spacing: -10px; }
+      letter-spacing: -2px; }
 
   #studio-page {
-    background: url(../images/patterns/semi_transparent_black_80.png);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #studio-mobile-img {
-    width: 100%;
-    content: url(../images/portrait/desk_portrait.png) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
+    background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed; }
 
   #gear-page {
-    background: url(../images/patterns/semi_transparent_black_80.png);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #gear-mobile-img {
-    width: 100%;
-    content: url(../images/portrait/mics_portrait.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
 
   #live-page {
-    background: url(../images/patterns/semi_transparent_black_80.png);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #live-mobile-img {
-    width: 100%;
-    content: url(../images/portrait/acoustic_portrait.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
 
   #about-page {
-    background: url(../images/patterns/semi_transparent_black_80.png);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #about-mobile-img {
-    width: 100%;
-    content: url(../images/portrait/drums_portrait.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
 
   #contact-page {
-    background: url(../images/patterns/semi_transparent_black_80.png);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  #contact-mobile-img {
-    width: 100%;
-    content: url(../images/portrait/speakers_portrait.png) no-repeat;
+    background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -517,7 +444,7 @@ html, body {
   .content {
     font-size: 3em;
     text-align: justify;
-    color: #333333;
+    color: #111111;
     width: 100%;
     margin: 0 auto; }
 
@@ -529,7 +456,7 @@ html, body {
     text-shadow: #555555 1px 1px 0px; }
 
   .sub-divider {
-    color: #333333;
+    color: #111111;
     font-size: 5em;
     text-align: center;
     text-shadow: #aaaaaa 1px 1px 0px;
@@ -565,7 +492,7 @@ html, body {
     margin: 0px 5px 0 0;
     font-size: 2em;
     float: right;
-    color: #333333; }
+    color: #111111; }
 
   #home {
     height: 100%;
@@ -737,7 +664,7 @@ html, body {
 
   .content {
     font-size: 1.5em;
-    color: #333333;
+    color: #111111;
     width: 100%;
     height: 100%;
     padding: 10px 5% 10px 5%; }
@@ -755,7 +682,7 @@ html, body {
     text-shadow: #555555 1px 1px 0px; }
 
   .sub-divider {
-    color: #333333;
+    color: #111111;
     font-size: 3em;
     text-align: center;
     text-shadow: #aaaaaa 1px 1px 0px;
@@ -792,7 +719,7 @@ html, body {
     right: 5px;
     font-size: 1em;
     float: right;
-    color: #333333;
+    color: #111111;
     cursor: pointer; }
     .close:hover {
       color: #914141;
@@ -867,132 +794,117 @@ html, body {
   .navbar {
     position: fixed;
     z-index: 999;
-    bottom: 0;
-    width: 100%;
-    height: 70px;
-    background: url(../images/patterns/semi_transparent_black_80.png); }
-    .navbar .nav {
-      margin-top: 10px; }
+    right: 2%;
+    top: 30%; }
     .navbar ul {
-      list-style: none;
-      text-align: center; }
+      list-style: none; }
     .navbar .nav-li {
-      font-size: 2em;
-      display: inline-block;
-      margin: 2px 3% 0 0;
-      padding: 1px;
+      margin-top: 10px;
       text-align: center;
+      border: 1px solid #111111;
       cursor: pointer;
-      border-bottom: 3px solid #555555; }
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      background: url(../images/patterns/semi_transparent_50.png); }
       .navbar .nav-li a {
         margin: 2px 1px 0 0;
-        color: #555555;
+        color: transparent;
         text-decoration: none;
         display: block; }
     .navbar .active {
-      border-bottom: 3px solid #6ff4ff; }
+      border: 1px solid #6ff4ff;
+      background: url(../images/patterns/semi_transparent_black_60.png); }
       .navbar .active a {
-        color: #aaaaaa;
-        text-shadow: #555555 1px 1px 0px; }
+        color: transparent; }
+    .navbar .nav-popup {
+      -webkit-border-radius: 0.2em;
+      -moz-border-radius: 0.2em;
+      border-radius: 0.2em;
+      right: 35px;
+      display: none;
+      position: absolute;
+      color: #111111;
+      background: url(../images/patterns/semi_transparent_50.png);
+      padding: 12px;
+      font-size: 1.5em;
+      white-space: nowrap; }
+    .navbar .nav-popup:after, .navbar .nav-popup:before {
+      left: 100%;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none; }
+    .navbar .nav-popup:after {
+      border-color: rgba(194, 225, 245, 0);
+      border-left-color: white;
+      opacity: 0.3;
+      border-width: 9px;
+      margin-top: -9px; }
+    .navbar .nav-popup:before {
+      border-color: rgba(194, 225, 245, 0);
+      border-left-color: white;
+      opacity: 0.3;
+      border-width: 10px;
+      margin-top: -10px; }
+    .navbar #nav-pointer {
+      font-size: 2em;
+      top: 50px;
+      right: 50px; }
+    .navbar #popup-1 {
+      top: -5px; }
+    .navbar #popup-2 {
+      top: 25px; }
+    .navbar #popup-3 {
+      top: 55px; }
+    .navbar #popup-4 {
+      top: 85px; }
+    .navbar #popup-5 {
+      top: 115px; }
+    .navbar #popup-6 {
+      top: 145px; }
+    .navbar #popup-7 {
+      top: 175px; }
+    .navbar #popup-8 {
+      top: 205px; }
+    .navbar #popup-9 {
+      top: 235px; }
+    .navbar #popup-10 {
+      top: 265px; }
 
   .page {
     width: 100%;
-    padding-bottom: 50%; }
-
-  .wrapper {
-    width: 60%;
-    margin: 2% 0 0 20%; }
-
-  body .wrapper:first-child {
-    margin: 0; }
-
-  .row {
-    clear: both;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex; }
-
-  .row:after {
-    content: "";
-    display: table;
-    clear: both; }
-
-  .col-1, .col-2, .col-3 {
-    position: relative;
-    height: auto;
-    float: left;
-    margin-right: 20px;
-    background: url(../images/patterns/semi_transparent_80.png); }
-
-  .col-1 {
-    width: 100%; }
-
-  .col-2 {
-    width: 49.7%; }
-
-  .col-3 {
-    width: 32%; }
+    padding-bottom: 45%; }
 
   .content {
+    background: url(../images/patterns/semi_transparent_80.png);
     font-size: 1.5em;
-    color: #333333;
-    width: 100%;
-    height: 100%;
+    color: #111111;
+    width: 60%;
+    margin: 0 auto;
+    height: 50%;
     padding: 10px 5% 10px 5%; }
     .content p {
-      height: 100%;
       margin-bottom: 10px; }
-      .content p:last-of-type {
-        margin-bottom: 0; }
 
-  .divider {
+  .divider h1 {
+    text-align: center;
     color: #aaaaaa;
     background: url(../images/patterns/semi_transparent_black_80.png);
-    font-size: 6em;
-    text-align: center;
+    font-size: 4em;
     text-shadow: #555555 1px 1px 0px; }
-
-  .sub-divider {
-    color: #333333;
-    font-size: 3em;
-    text-align: center;
-    text-shadow: #aaaaaa 1px 1px 0px;
-    margin: 5px 0 -12px 0; }
-
-  #show-gear-list {
-    cursor: pointer;
-    margin-top: 15px;
-    text-align: center; }
-
-  #gear-list {
-    display: none; }
-    #gear-list h1, #gear-list h2 {
-      text-align: center; }
-    #gear-list h1 {
-      font-size: 3em; }
-    #gear-list h2 {
-      font-size: 2em;
-      cursor: pointer; }
-
-  .gear-category {
-    margin-bottom: 5px; }
-    .gear-category ul {
-      margin: 0;
-      text-align: center;
-      font-size: 1.5em;
-      display: none;
-      list-style: none; }
-      .gear-category ul li {
-        padding: 1px 0 1px 0; }
 
   .close {
     position: absolute;
     right: 5px;
     font-size: 1em;
     float: right;
-    color: #333333;
+    color: #111111;
     cursor: pointer; }
     .close:hover {
       color: #914141;
@@ -1003,9 +915,7 @@ html, body {
     display: none; }
 
   #home {
-    color: #aaaaaa;
-    text-shadow: #555555 1px 1px 0px;
-    background: url(../images/large/home_1920.png) no-repeat center center fixed;
+    background: url(../images/landscape/secret_garden_1098.png) no-repeat center center fixed;
     -webkit-transition: background 1s linear;
     -moz-transition: background 1s linear;
     -o-transition: background 1s linear;
@@ -1015,11 +925,17 @@ html, body {
     -o-background-size: cover;
     background-size: cover; }
     #home h1 {
+      width: 80%;
+      margin: 0 auto;
+      background: url(../images/patterns/semi_transparent_black_80.png);
+      text-shadow: #555555 1px 1px 0px;
+      color: white;
+      opacity: 0.8;
       text-align: center;
-      font-size: 20em;
+      font-size: 15em;
       padding: 5%;
       line-height: 0.9em;
-      letter-spacing: -10px; }
+      letter-spacing: -2px; }
 
   #studio-page {
     background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed;

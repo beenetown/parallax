@@ -2,11 +2,10 @@
 <body>
     <!--#include virtual="/partials/navbar.html" -->
     <!--#include virtual="/partials/pages/home.html" -->  
-    <!--#include virtual="/partials/pages/studio.html" -->  
-    <!--#include virtual="/partials/pages/gear.shtml" -->  
-    <!--#include virtual="/partials/pages/live.html" -->  
-    <!--#include virtual="/partials/pages/about.html" -->
-    <!--#include virtual="/partials/pages/contact.html" --> 
+    <!--#include virtual="/partials/pages/page_1.html" -->  
+    <!--#include virtual="/partials/pages/page_2.html" -->  
+    <!--#include virtual="/partials/pages/page_3.html" -->  
+    <!--#include virtual="/partials/pages/page_4.html" -->
     <!-- ==========footer=========== -->
     <!--#include virtual="/partials/footer.html" -->
 </body>
