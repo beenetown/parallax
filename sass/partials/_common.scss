@@ -10,5 +10,187 @@ html, body{height:100%;}
   z-index: 10000;
   position: fixed;
 }
-#position{top:0;}
-#height{top: 55px;}
+
+.navbar {
+  position: fixed;
+  z-index: 999;
+  right: 2%;
+  top: 30%;
+  ul {
+    list-style: none;
+  }
+
+  .nav-li {
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid $darkGray;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    @include rounded(50%);
+    background: url(../images/patterns/semi_transparent_80.png);
+    a {
+      margin: 2px 1px 0 0;
+      color: transparent;
+      text-decoration: none;
+      display: block;
+    }
+  }
+
+  .active {
+    border: 1px solid $highlight;
+    background: url(../images/patterns/semi_transparent_black_60.png); 
+    a {
+      color: transparent;
+    }
+  }
+
+  .nav-popup {
+    @include rounded(0.2em);
+    right: 35px;
+    display: none;
+    position: absolute;
+    color: $darkGray;
+    background: url(../images/patterns/semi_transparent_80.png);
+    padding: 12px;
+    font-size: 1.5em;
+    white-space: nowrap;
+  }
+  
+  .nav-popup:after, .nav-popup:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .nav-popup:after {
+    border-color: rgba(194, 225, 245, 0);
+    border-left-color: white;
+    opacity: 0.55;
+    border-width: 9px;
+    margin-top: -9px;
+  }
+
+  .nav-popup:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-left-color: white;
+    opacity: 0.55;
+    border-width: 10px;
+    margin-top: -10px;
+  }
+
+  #nav-pointer {
+    font-size: 2em;
+    top: 50px;
+    right: 50px;
+  }
+
+  #popup-1 {top: -5px;}
+  #popup-2 {top: 25px;}
+  #popup-3 {top: 55px;}
+  #popup-4 {top: 85px;}
+  #popup-5 {top: 115px;}
+  #popup-6 {top: 145px;}
+  #popup-7 {top: 175px;}
+  #popup-8 {top: 205px;}
+  #popup-9 {top: 235px;}
+  #popup-10 {top: 265px;}
+}
+
+.page {
+  width: 100%;
+  padding-bottom: 50%;
+}
+
+.content {
+  background: url(../images/patterns/semi_transparent_80.png);
+  font-size: 1.5em;
+  color: $darkGray;
+  margin: 0 auto;
+  height: 50%;
+  p {
+    // height: 100%;
+    margin-bottom: 10px;
+    // &:last-of-type {
+    //   margin-bottom: 130%; 
+    // }
+  }
+}
+
+.divider {
+  margin: 0 auto;
+  // padding-top: 10%;
+  h1 {
+    text-align: center;
+    color: $lightGray;
+    background: url(../images/patterns/semi_transparent_black_80.png);
+    font-size: 4em;
+    text-shadow: $mediumGray 1px 1px 0px;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 5px;
+  font-size: 1em;
+  float: right;
+  color: $darkGray;
+  cursor: pointer;
+  &:hover {
+    color: $lightRed;
+    font-size: 1.3em;
+    text-shadow: $darkRed 1px 1px 0px;
+  }
+} 
+
+.mobile-img {display: none;}
+
+#home {
+  background: url(../images/landscape/secret_garden_1098.png) no-repeat center center fixed; 
+  @include transition_background;
+  @include backgroundSize;
+  padding-top: 10%;
+  h1 { 
+    width: 80%;
+    margin: 0 auto;
+    background: url(../images/patterns/semi_transparent_black_80.png);   
+    text-shadow: $mediumGray 1px 1px 0px;
+    color: white;
+    opacity: 0.8;
+    text-align: center;
+    font-size: 15em;
+    padding: 5%;
+    line-height: 0.9em;
+    letter-spacing: -2px;
+  }
+}
+
+#studio-page {
+  background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed; 
+  @include backgroundSize;
+}
+
+#gear-page {
+  background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed; 
+  @include backgroundSize;
+}
+
+#live-page {
+  background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed; 
+  @include backgroundSize;
+}
+
+#about-page {
+  background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed; 
+  @include backgroundSize;
+}
+
+#contact-page {
+  background: url(../images/patterns/semi_transparent_black_80.png) no-repeat center center fixed; 
+  @include backgroundSize;
+}
