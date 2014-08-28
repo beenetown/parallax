@@ -51,7 +51,7 @@ html, body{height:100%;}
     display: none;
     position: absolute;
     color: $darkGray;
-    background: url(../images/patterns/semi_transparent_80.png);
+    background: $grayWhite;
     padding: 12px;
     font-size: 1.5em;
     white-space: nowrap;
@@ -69,17 +69,12 @@ html, body{height:100%;}
   }
 
   .nav-popup:after {
-    border-color: rgba(194, 225, 245, 0);
-    border-left-color: white;
-    opacity: 0.55;
-    border-width: 9px;
-    margin-top: -9px;
+    display: none;
   }
 
   .nav-popup:before {
     border-color: rgba(194, 225, 245, 0);
-    border-left-color: white;
-    opacity: 0.55;
+    border-left-color: $grayWhite;
     border-width: 10px;
     margin-top: -10px;
   }

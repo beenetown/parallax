@@ -282,7 +282,7 @@ html, body {
     display: none;
     position: absolute;
     color: #111111;
-    background: url(../images/patterns/semi_transparent_80.png);
+    background: rgba(255, 255, 255, 0.8);
     padding: 12px;
     font-size: 1.5em;
     white-space: nowrap; }
@@ -296,15 +296,10 @@ html, body {
     position: absolute;
     pointer-events: none; }
   .navbar .nav-popup:after {
-    border-color: rgba(194, 225, 245, 0);
-    border-left-color: white;
-    opacity: 0.55;
-    border-width: 9px;
-    margin-top: -9px; }
+    display: none; }
   .navbar .nav-popup:before {
     border-color: rgba(194, 225, 245, 0);
-    border-left-color: white;
-    opacity: 0.55;
+    border-left-color: rgba(255, 255, 255, 0.8);
     border-width: 10px;
     margin-top: -10px; }
   .navbar #nav-pointer {
